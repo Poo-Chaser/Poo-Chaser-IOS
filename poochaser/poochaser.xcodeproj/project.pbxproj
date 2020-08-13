@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		96241E1C24E51E0D001B5948 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96241E1B24E51E0D001B5948 /* RegisterController.swift */; };
-		96241E2124E53F52001B5948 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96241E2024E53F52001B5948 /* Register.storyboard */; };
 		96575E3F24E3C051009B4FFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96575E3E24E3C051009B4FFF /* AppDelegate.swift */; };
 		96575E4124E3C051009B4FFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96575E4024E3C051009B4FFF /* SceneDelegate.swift */; };
 		96575E4324E3C051009B4FFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96575E4224E3C051009B4FFF /* ViewController.swift */; };
@@ -21,7 +20,6 @@
 
 /* Begin PBXFileReference section */
 		96241E1B24E51E0D001B5948 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
-		96241E2024E53F52001B5948 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		96575E3B24E3C051009B4FFF /* poochaser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poochaser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96575E3E24E3C051009B4FFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96575E4024E3C051009B4FFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,7 +63,6 @@
 		96241E1F24E53F31001B5948 /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
-				96241E2024E53F52001B5948 /* Register.storyboard */,
 			);
 			path = StoryBoard;
 			sourceTree = "<group>";
@@ -237,7 +234,6 @@
 				96575E4B24E3C054009B4FFF /* LaunchScreen.storyboard in Resources */,
 				96575E4824E3C054009B4FFF /* Assets.xcassets in Resources */,
 				96575E4624E3C051009B4FFF /* Main.storyboard in Resources */,
-				96241E2124E53F52001B5948 /* Register.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

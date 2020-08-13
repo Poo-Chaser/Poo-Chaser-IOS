@@ -94,7 +94,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="RegisterBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zd9-vE-Xzy"/>
-                                                    <segue destination="rh9-6e-1lw" kind="show" id="168-vG-avE"/>
+                                                    <segue destination="b6y-xI-NW9" kind="show" id="aV0-Ex-XMR"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -115,16 +115,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
-        </scene>
-        <!--RegisterController-->
-        <scene sceneID="ZL7-l7-Zla">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Register" storyboardName="Register" referencedIdentifier="RegisterController" id="rh9-6e-1lw" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="9zh-iX-6Rd"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yEh-GW-ZhE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1283" y="401"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="yr6-qH-zhJ">
@@ -187,7 +177,74 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8wf-6u-4bn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1282.608695652174" y="-240.40178571428569"/>
+            <point key="canvasLocation" x="1057" y="-350"/>
+        </scene>
+        <!--Register Controller-->
+        <scene sceneID="bHi-zU-Ifb">
+            <objects>
+                <viewController storyboardIdentifier="Register" id="b6y-xI-NW9" customClass="RegisterController" customModule="poochaser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h4B-SK-6ik">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="iQu-iD-NHL">
+                                <rect key="frame" x="20" y="20" width="374" height="550.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poo Chaser" translatesAutoresizingMaskIntoConstraints="NO" id="hLl-F0-ETs">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="166.5"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="CJe-Lw-WZU" userLabel="Middle View">
+                                        <rect key="frame" x="0.0" y="216.5" width="374" height="236"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이름" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RJr-rQ-RXV">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aBz-hT-IIu">
+                                                <rect key="frame" x="0.0" y="64" width="374" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="패스워드" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jfl-gn-SZc">
+                                                <rect key="frame" x="0.0" y="128" width="374" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="패스워드 확인" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6G0-PE-6Yn">
+                                                <rect key="frame" x="0.0" y="192" width="374" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8F-nq-EyT">
+                                        <rect key="frame" x="0.0" y="502.5" width="374" height="48"/>
+                                        <color key="backgroundColor" red="0.114701364" green="0.60800056410000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="30b-m0-g85"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="회원가입">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iQu-iD-NHL" firstAttribute="top" secondItem="1Dg-JZ-P2u" secondAttribute="top" constant="20" id="JeZ-7M-D8b"/>
+                            <constraint firstItem="iQu-iD-NHL" firstAttribute="leading" secondItem="1Dg-JZ-P2u" secondAttribute="leading" constant="20" id="KZk-rg-Rz9"/>
+                            <constraint firstItem="1Dg-JZ-P2u" firstAttribute="trailing" secondItem="iQu-iD-NHL" secondAttribute="trailing" constant="20" id="rLL-E8-xmj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1Dg-JZ-P2u"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="D6U-9U-t4F"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ySo-ae-iTT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="830"/>
         </scene>
     </scenes>
     <resources>
