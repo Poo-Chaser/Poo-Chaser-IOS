@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96241E1C24E51E0D001B5948 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96241E1B24E51E0D001B5948 /* RegisterController.swift */; };
 		96575E3F24E3C051009B4FFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96575E3E24E3C051009B4FFF /* AppDelegate.swift */; };
 		96575E4124E3C051009B4FFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96575E4024E3C051009B4FFF /* SceneDelegate.swift */; };
 		96575E4324E3C051009B4FFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96575E4224E3C051009B4FFF /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		96241E1B24E51E0D001B5948 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		96575E3B24E3C051009B4FFF /* poochaser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poochaser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96575E3E24E3C051009B4FFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96575E4024E3C051009B4FFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				96575E4224E3C051009B4FFF /* ViewController.swift */,
+				96241E1B24E51E0D001B5948 /* RegisterController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96241E1C24E51E0D001B5948 /* RegisterController.swift in Sources */,
 				96575E6224E3C4D8009B4FFF /* LoginViewController.swift in Sources */,
 				96575E4324E3C051009B4FFF /* ViewController.swift in Sources */,
 				96575E3F24E3C051009B4FFF /* AppDelegate.swift in Sources */,
