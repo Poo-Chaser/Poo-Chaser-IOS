@@ -10,8 +10,9 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet var LoginView: UIView!
-    @IBOutlet weak var emailTextfield: UITextField!
+    @IBAction func RegisterBtn(_ sender: Any) {
+        print("Register!")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
