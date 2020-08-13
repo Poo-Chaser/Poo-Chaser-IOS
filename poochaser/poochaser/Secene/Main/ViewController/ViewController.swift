@@ -10,12 +10,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBAction func RegisterBtn(_ sender: Any) {
-        print("Register!")
-    }
+    @IBOutlet weak var viewTimeLabel: UILabel!
+//    @IBOutlet weak var cellTimeLabel: UILabel!
+    
+    @IBOutlet weak var DailyTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM"
+        let current_date_format = formatter.string(from: Date())
+        viewTimeLabel.text = current_date_format
+        print(current_date_format)
+        
+//        let cellFormatter = DateFormatter()
+//        cellFormatter.dateFormat = "HH:mm"
+//        let current_cell_date_format = cellFormatter.string(from: Date())
+//        cellTimeLabel.text = current_cell_date_format
     }
 
 
