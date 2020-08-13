@@ -10,13 +10,10 @@ import UIKit
 
 class RegisterController: UIViewController {
 
-    @IBOutlet weak var nameTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        nameTextField.layer.borderWidth = 2
-        nameTextField.layer.cornerRadius = 10
+        
     }
 
 
