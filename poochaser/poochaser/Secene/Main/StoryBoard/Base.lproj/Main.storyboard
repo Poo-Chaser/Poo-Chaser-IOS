@@ -200,6 +200,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fft-9r-a51">
                                 <rect key="frame" x="372" y="39" width="76" height="22"/>
                                 <state key="normal" title="Button" image="gear" catalog="system"/>
+                                <connections>
+                                    <segue destination="rGl-Mq-YDB" kind="show" id="7MO-FK-efO"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poo Chaser" translatesAutoresizingMaskIntoConstraints="NO" id="Qw6-lx-F2s">
                                 <rect key="frame" x="140" y="20" width="134" height="66"/>
@@ -276,6 +279,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cbx-Zv-5JG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2911.594202898551" y="702.45535714285711"/>
+        </scene>
+        <!--Setting View Controller-->
+        <scene sceneID="YnT-fD-70G">
+            <objects>
+                <viewController storyboardIdentifier="SettingViewController" id="rGl-Mq-YDB" customClass="SettingViewController" customModule="poochaser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="taP-f1-0OW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Poo Chaser" translatesAutoresizingMaskIntoConstraints="NO" id="M56-Xu-S6K">
+                                <rect key="frame" x="140" y="20" width="134" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OT9-4U-3QD">
+                                <rect key="frame" x="20" y="118" width="374" height="690"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingCell" id="azo-nS-Zoo">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="azo-nS-Zoo" id="eBo-L7-7lg" customClass="UITableViewCell">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="rGl-Mq-YDB" id="1de-n0-EPE"/>
+                                    <outlet property="delegate" destination="rGl-Mq-YDB" id="RIE-e0-KS9"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="3vT-41-Dyp"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0aC-Jl-CsT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Js1-Il-KSn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4002.898550724638" y="701.78571428571422"/>
         </scene>
         <!--Report-->
         <scene sceneID="Hfk-nn-IDM">
