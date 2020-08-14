@@ -270,7 +270,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OxN-mU-0LN"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" selectedImage="house.fill" catalog="system" id="zRo-xx-5qF"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" selectedImage="house.fill" id="zRo-xx-5qF"/>
                     <connections>
                         <outlet property="DailyTableView" destination="DiO-1g-2iv" id="zfO-Jp-mMT"/>
                         <outlet property="viewTimeLabel" destination="cHW-Ob-N7q" id="81T-1i-cpX"/>
@@ -303,6 +303,15 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="azo-nS-Zoo" id="eBo-L7-7lg" customClass="UITableViewCell">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="settingTitleLabel" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QC8-4M-x3P">
+                                                    <rect key="frame" x="20" y="8" width="57" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -340,7 +349,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="7gJ-0s-amQ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Report" selectedImage="book.fill" catalog="system" id="TCL-NL-CfM"/>
+                    <tabBarItem key="tabBarItem" title="Report" image="doc.text.fill" catalog="system" selectedImage="doc.text.fill" id="TCL-NL-CfM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2i5-ps-JOS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -365,7 +374,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="WnR-wD-mJ1"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Calendar" selectedImage="calendar" catalog="system" id="Xo0-gi-ENM"/>
+                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar" catalog="system" selectedImage="calendar" id="Xo0-gi-ENM"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CSB-pq-tGu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -463,8 +472,8 @@
     <resources>
         <image name="Poo Chaser" width="166.5" height="166.5"/>
         <image name="arrow.clockwise" catalog="system" width="56" height="64"/>
-        <image name="book.fill" catalog="system" width="64" height="50"/>
         <image name="calendar" catalog="system" width="64" height="52"/>
+        <image name="doc.text.fill" catalog="system" width="56" height="64"/>
         <image name="gear" catalog="system" width="64" height="58"/>
         <image name="house.fill" catalog="system" width="64" height="52"/>
         <image name="plus.circle" catalog="system" width="64" height="60"/>
