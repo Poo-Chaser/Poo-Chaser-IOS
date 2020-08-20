@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		96241E1C24E51E0D001B5948 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96241E1B24E51E0D001B5948 /* RegisterController.swift */; };
+		964101E324EED38100C691C0 /* DailyAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964101E224EED38100C691C0 /* DailyAddViewController.swift */; };
 		96575E3F24E3C051009B4FFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96575E3E24E3C051009B4FFF /* AppDelegate.swift */; };
 		96575E4124E3C051009B4FFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96575E4024E3C051009B4FFF /* SceneDelegate.swift */; };
 		96575E4324E3C051009B4FFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96575E4224E3C051009B4FFF /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		96241E1B24E51E0D001B5948 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		964101E224EED38100C691C0 /* DailyAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyAddViewController.swift; sourceTree = "<group>"; };
 		96575E3B24E3C051009B4FFF /* poochaser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poochaser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96575E3E24E3C051009B4FFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96575E4024E3C051009B4FFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			children = (
 				96575E4224E3C051009B4FFF /* ViewController.swift */,
 				96D5442F24E6B13100C653C1 /* SettingViewController.swift */,
+				964101E224EED38100C691C0 /* DailyAddViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				96575E4324E3C051009B4FFF /* ViewController.swift in Sources */,
 				96575E3F24E3C051009B4FFF /* AppDelegate.swift in Sources */,
 				96575E4124E3C051009B4FFF /* SceneDelegate.swift in Sources */,
+				964101E324EED38100C691C0 /* DailyAddViewController.swift in Sources */,
 				96D5443024E6B13100C653C1 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
