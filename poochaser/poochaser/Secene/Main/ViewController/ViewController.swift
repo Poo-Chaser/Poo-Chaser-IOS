@@ -35,12 +35,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         AddButton.layer.borderWidth = 1.0
         AddButton.layer.borderColor = UIColor.black.cgColor
         AddButton.layer.cornerRadius = 10
+        AddButton.layer.backgroundColor = UIColor.white.cgColor
+        
+        AddButton.layer.shadowColor = UIColor.gray.cgColor
+        AddButton.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        AddButton.layer.shadowOpacity = 1.0
+        AddButton.layer.shadowRadius = 0.0
+        AddButton.layer.masksToBounds = false
         
         // TableView
         DailyTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
-               self.DailyTableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
-               DailyTableView.delegate = self
-               DailyTableView.dataSource = self
+        self.DailyTableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
+        DailyTableView.delegate = self
+        DailyTableView.dataSource = self
+        DailyTableView.estimatedRowHeight = 30
         
     }
     
@@ -77,21 +85,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.backgroundColor = UIColor.white
         cell.layer.borderColor = UIColor.black.cgColor
         cell.layer.borderWidth = 1
-        cell.layer.cornerRadius = 8
+        cell.layer.cornerRadius = 10
         cell.clipsToBounds = true
+        
+        cell.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        cell.layer.shadowOpacity = 1.0
+        cell.layer.shadowRadius = 0.0
+        cell.layer.masksToBounds = false
+//        cell.layer.cornerRadius = 4.0
         
         return cell
     }
     
     // method to run when table view cell is tapped
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // note that indexPath.section is used rather than indexPath.row
-        print("You tapped cell number \(indexPath.section).")
-    }
-
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 500
-    }
-
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        // note that indexPath.section is used rather than indexPath.row
+//        print("You tapped cell number \(indexPath.section).")
+//    }
 }
 
