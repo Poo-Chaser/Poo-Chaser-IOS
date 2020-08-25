@@ -130,4 +130,21 @@ class DailyAddViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         timeTextField.text = date
     }
     
+    // MARK: - Check Switch
+    func controlSwitch() {
+        let checkedSwitch = checkSwitch
+        
+        checkedSwitch?.isOn = true
+        
+        checkedSwitch?.addTarget(self, action: #selector(onClickSwitch(sender:)), for: .valueChanged)
+        
+    }
+    
+    @objc func onClickSwitch(sender: UISwitch) {
+        if sender.isOn {
+            print("On")
+        } else {
+            print("Off")
+        }
+    }
 }
