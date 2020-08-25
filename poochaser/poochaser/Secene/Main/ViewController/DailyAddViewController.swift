@@ -15,15 +15,21 @@ class DailyAddViewController: UIViewController, UITextFieldDelegate, UIPickerVie
     let color = ["갈색", "적색", "흑색", "노란색", "녹색", "회색"]
     
     // 배변 종류 선택 text Field
+    @IBOutlet weak var timeTextField: UITextField!
     @IBOutlet weak var kindTextField: UITextField!
     @IBOutlet weak var colorTextField: UITextField!
     
+    // 쾌변 유무 스위치
+    @IBOutlet weak var checkSwitch: UISwitch!
+    
     let kindPickerView = UIPickerView()
     let colorPickerView = UIPickerView()
+    let timePickerView = UIDatePicker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
+        timeTextField.tintColor = .clear
         kindTextField.tintColor = .clear
         colorTextField.tintColor = .clear
 
@@ -31,17 +37,7 @@ class DailyAddViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         dismissPickerView()
     }
     
-    // MARK: - Update Time Picker
-    
-    @IBAction func updateTimePicker(_ sender: Any) {
-//        let datePickerView = sender
-        let formatter = DateFormatter()
-        
-        formatter.dateFormat = "HH:mm"
-    }
-    
-    
-    // MARK: - Kind Picker, Color Picker
+    // MARK: - Time Picker, Kind Picker, Color Picker -> View
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -74,6 +70,8 @@ class DailyAddViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         }
     }
 
+    // MARK: - Create Picker View
+    
     func createPickerView() {
         
         kindPickerView.delegate = self
@@ -85,11 +83,28 @@ class DailyAddViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         kindPickerView.tag = 0
         colorPickerView.tag = 1
         
+        // Time Picker View 현재 시간 설정
+        timePickerView.datePickerMode = .time
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        dateFormatter.dateStyle = .none
+        dateFormatter.timeStyle = .short
+        
+        let current_time = dateFormatter.string(from: Date())
+        timeTextField.text = current_time
+        
+        // 시간 변경
+        timePickerView.addTarget(self, action: #selector(changed), for: .valueChanged)
+       
+        
         kindTextField.inputView = kindPickerView
         colorTextField.inputView = colorPickerView
+        timeTextField.inputView = timePickerView
         
     }
 
+    // MARK: - dissmiss Picker View
+    
     func dismissPickerView() {
         let toolBar = UIToolbar(frame:  CGRect(x: 0, y: 0, width: view.frame.size.width, height: 35))
         let button = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.action))
@@ -98,10 +113,21 @@ class DailyAddViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         
         kindTextField.inputAccessoryView = toolBar
         colorTextField.inputAccessoryView = toolBar
-        
+        timeTextField.inputAccessoryView = toolBar
     }
 
     @objc func action() {
         view.endEditing(true)
     }
+    
+    // Date Picker를 이용한 시간 변경
+    @objc func changed() {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .none
+        dateFormatter.timeStyle = .short
+        
+        let date = dateFormatter.string(from: timePickerView.date)
+        timeTextField.text = date
+    }
+    
 }

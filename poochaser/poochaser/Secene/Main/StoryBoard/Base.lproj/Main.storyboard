@@ -16,19 +16,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kjm-T3-ulh">
-                                <rect key="frame" x="20" y="64" width="374" height="595"/>
+                                <rect key="frame" x="20" y="64" width="374" height="761.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="D0Y-c3-cog" userLabel="Top View">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="166.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="333"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Poo Chaser" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VQM-Td-ySs">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="166.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="333"/>
                                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                             </imageView>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aPx-Pt-h7p" userLabel="Middle View">
-                                        <rect key="frame" x="0.0" y="234" width="374" height="149"/>
+                                        <rect key="frame" x="0.0" y="400.5" width="374" height="149"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jih-tS-juI">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="98"/>
@@ -69,7 +69,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gvF-iw-kZ5" userLabel="Bottom View">
-                                        <rect key="frame" x="0.0" y="438.5" width="374" height="156.5"/>
+                                        <rect key="frame" x="0.0" y="605" width="374" height="156.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HsE-ES-pHZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="48"/>
@@ -128,13 +128,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="mRA-ND-wh0">
-                                <rect key="frame" x="8" y="0.0" width="398" height="618"/>
+                                <rect key="frame" x="8" y="0.0" width="398" height="784.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poo Chaser" translatesAutoresizingMaskIntoConstraints="NO" id="1xI-gY-36H">
-                                        <rect key="frame" x="0.0" y="0.0" width="398" height="166.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="333"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="n0g-Qi-cuW">
-                                        <rect key="frame" x="0.0" y="316.5" width="398" height="301.5"/>
+                                        <rect key="frame" x="0.0" y="483" width="398" height="301.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사용자의 이메일로 비밀번호 재설정 링크를 보내드립니다." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8CT-a1-APe">
                                                 <rect key="frame" x="0.0" y="0.0" width="398" height="19.5"/>
@@ -191,7 +191,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QUa-U4-J4V">
-                                <rect key="frame" x="20" y="39" width="88.5" height="22"/>
+                                <rect key="frame" x="20" y="39" width="22" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="22" id="pka-a0-v71"/>
                                 </constraints>
@@ -205,7 +205,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poo Chaser" translatesAutoresizingMaskIntoConstraints="NO" id="Qw6-lx-F2s">
-                                <rect key="frame" x="206.5" y="20" width="1" height="66"/>
+                                <rect key="frame" x="140" y="20" width="134" height="66"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="viewTimeLabel" text="MM월 dd일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHW-Ob-N7q">
                                 <rect key="frame" x="123" y="149" width="168" height="42"/>
@@ -303,30 +303,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="hEk-ex-kNq">
-                                <rect key="frame" x="20" y="20" width="374" height="514.5"/>
+                                <rect key="frame" x="20" y="20" width="374" height="474"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poo Chaser" translatesAutoresizingMaskIntoConstraints="NO" id="6Kl-eW-UxX">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="1"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="166.5"/>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="378-hK-VmG" userLabel="Time View">
-                                        <rect key="frame" x="0.0" y="31" width="374" height="240"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XBg-Vn-LMx" userLabel="Set Time View">
+                                        <rect key="frame" x="0.0" y="196.5" width="374" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시간 설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpy-N1-SVr">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="74" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="PJd-uF-5kz">
-                                                <rect key="frame" x="0.0" y="24" width="374" height="216"/>
-                                                <connections>
-                                                    <action selector="updateTimePicker:" destination="1qY-Qj-M89" eventType="valueChanged" id="dy7-3h-bsa"/>
-                                                </connections>
-                                            </datePicker>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eft-WS-X8a">
+                                                <rect key="frame" x="94" y="0.0" width="280" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="owH-sf-KTo" userLabel="Select View">
-                                        <rect key="frame" x="0.0" y="301" width="374" height="213.5"/>
+                                        <rect key="frame" x="0.0" y="260.5" width="374" height="213.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kwj-s3-fr4" userLabel="Kind View">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
@@ -339,7 +338,7 @@
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="kindPicker" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="배변 종류" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZUk-Fe-s8D">
                                                         <rect key="frame" x="94" y="0.0" width="280" height="24"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
@@ -355,7 +354,7 @@
                                                     </label>
                                                     <textField opaque="NO" tag="1" contentMode="scaleToFill" restorationIdentifier="colorPicker" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="배변 색" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kYe-xV-HB6">
                                                         <rect key="frame" x="95" y="0.0" width="279" height="26.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
@@ -396,17 +395,18 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="MbM-Y0-Hvo" firstAttribute="bottom" secondItem="hEk-ex-kNq" secondAttribute="bottom" constant="273.5" id="2Hs-Sk-ZmM"/>
-                            <constraint firstItem="hEk-ex-kNq" firstAttribute="top" secondItem="MbM-Y0-Hvo" secondAttribute="top" constant="20" id="8YM-Zq-AD7"/>
-                            <constraint firstItem="MbM-Y0-Hvo" firstAttribute="trailing" secondItem="hEk-ex-kNq" secondAttribute="trailing" constant="20" id="EqI-0g-gi3"/>
-                            <constraint firstItem="hEk-ex-kNq" firstAttribute="leading" secondItem="MbM-Y0-Hvo" secondAttribute="leading" constant="20" id="X1z-4g-Fbg"/>
+                            <constraint firstItem="hEk-ex-kNq" firstAttribute="top" secondItem="MbM-Y0-Hvo" secondAttribute="top" constant="20" id="ZBL-H4-jro"/>
+                            <constraint firstItem="MbM-Y0-Hvo" firstAttribute="trailing" secondItem="hEk-ex-kNq" secondAttribute="trailing" constant="20" id="kW6-EZ-HGy"/>
+                            <constraint firstItem="hEk-ex-kNq" firstAttribute="leading" secondItem="MbM-Y0-Hvo" secondAttribute="leading" constant="20" id="lid-s5-Erk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MbM-Y0-Hvo"/>
                     </view>
                     <navigationItem key="navigationItem" id="G9H-zY-aw5"/>
                     <connections>
+                        <outlet property="checkSwitch" destination="ULK-VD-ICa" id="AUd-QO-3QC"/>
                         <outlet property="colorTextField" destination="kYe-xV-HB6" id="K4B-ZQ-gyh"/>
                         <outlet property="kindTextField" destination="ZUk-Fe-s8D" id="Mah-5V-7xA"/>
+                        <outlet property="timeTextField" destination="Eft-WS-X8a" id="6Qe-Li-sy4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5a4-7S-1Sg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
