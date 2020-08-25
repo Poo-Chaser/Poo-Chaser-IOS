@@ -26,7 +26,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         // 날짜 포멧
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM"
+        formatter.dateFormat = "MM월 dd일"
         let current_date_format = formatter.string(from: Date())
         viewTimeLabel.text = current_date_format
         print(current_date_format)
