@@ -370,6 +370,9 @@
                                                     </label>
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ULK-VD-ICa">
                                                         <rect key="frame" x="325" y="0.0" width="51" height="31"/>
+                                                        <connections>
+                                                            <action selector="checkSwitch:" destination="1qY-Qj-M89" eventType="valueChanged" id="cuO-WA-OzH"/>
+                                                        </connections>
                                                     </switch>
                                                 </subviews>
                                             </stackView>
@@ -403,7 +406,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="G9H-zY-aw5"/>
                     <connections>
-                        <outlet property="checkSwitch" destination="ULK-VD-ICa" id="AUd-QO-3QC"/>
                         <outlet property="colorTextField" destination="kYe-xV-HB6" id="K4B-ZQ-gyh"/>
                         <outlet property="kindTextField" destination="ZUk-Fe-s8D" id="Mah-5V-7xA"/>
                         <outlet property="timeTextField" destination="Eft-WS-X8a" id="6Qe-Li-sy4"/>

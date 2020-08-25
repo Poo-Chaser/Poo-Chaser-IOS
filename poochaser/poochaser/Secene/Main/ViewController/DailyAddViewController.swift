@@ -20,7 +20,13 @@ class DailyAddViewController: UIViewController, UITextFieldDelegate, UIPickerVie
     @IBOutlet weak var colorTextField: UITextField!
     
     // 쾌변 유무 스위치
-    @IBOutlet weak var checkSwitch: UISwitch!
+    @IBAction func checkSwitch(_ sender: UISwitch) {
+        if sender.isOn == true {
+            print("true")
+        } else {
+            print("false")
+        }
+    }
     
     let kindPickerView = UIPickerView()
     let colorPickerView = UIPickerView()
@@ -128,23 +134,5 @@ class DailyAddViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         
         let date = dateFormatter.string(from: timePickerView.date)
         timeTextField.text = date
-    }
-    
-    // MARK: - Check Switch
-    func controlSwitch() {
-        let checkedSwitch = checkSwitch
-        
-        checkedSwitch?.isOn = true
-        
-        checkedSwitch?.addTarget(self, action: #selector(onClickSwitch(sender:)), for: .valueChanged)
-        
-    }
-    
-    @objc func onClickSwitch(sender: UISwitch) {
-        if sender.isOn {
-            print("On")
-        } else {
-            print("Off")
-        }
     }
 }
