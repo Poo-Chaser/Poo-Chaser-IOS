@@ -23,8 +23,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
-    let testArr = ["asdf", "qwer", "zxcv", "asdf"]
-    
     // AppDelegate에서 데이터를 전달 받을 변수
     var paramTime: String = ""
     var paramKind: String = ""
@@ -45,7 +43,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // MARK: - viewWillApper
     override func viewWillAppear(_ animated: Bool) {
         let ad = UIApplication.shared.delegate as? AppDelegate
-
+        
         if let time = ad?.paramTime {
             self.report.time = time
         }
@@ -74,9 +72,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidAppear(_ animated: Bool) {
         reportList.append(report)
+        
+        // report init값 삭제
+        if report.time == "HH:mm" {
+            reportList.remove(at: 0)
+        }
+        
         DailyTableView.reloadData()
+        
         print("main : \(reportList)")
-        print(reportList.last!)
         print(reportList.count)
     }
     
@@ -142,7 +146,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.textLabel?.textAlignment = NSTextAlignment.center
         
         // note that indexPath.section is used rather than indexPath.row
-//        cell.textLabel?.text = testArr[indexPath.section]
         cell.textLabel?.text = reportList[indexPath.section].time
         
         
