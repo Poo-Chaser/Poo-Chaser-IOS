@@ -10,7 +10,28 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    let test: [String] = ["Test1", "Test2", "Hello"]
+    // Report를 구성하는 구조체
+    struct Report {
+        var time: String
+        var kind: String
+        var color: String
+        
+        init() {
+            time = "HH:mm"
+            kind = "제 n형"
+            color = "n색"
+        }
+    }
+    
+    let testArr = ["asdf", "qwer", "zxcv", "asdf"]
+    
+    // AppDelegate에서 데이터를 전달 받을 변수
+    var paramTime: String = ""
+    var paramKind: String = ""
+    var paramColor: String = ""
+    
+    var report = Report()
+    var reportList = [Report]()
     
     let cellReuseIdentifier = "cell"
     let cellSpacingHeight: CGFloat = 10
@@ -21,17 +42,55 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var DailyTableView: UITableView!
     
+    // MARK: - viewWillApper
+    override func viewWillAppear(_ animated: Bool) {
+        let ad = UIApplication.shared.delegate as? AppDelegate
+
+        if let time = ad?.paramTime {
+            self.report.time = time
+        }
+
+        if let kind = ad?.paramKind {
+            self.report.kind = kind
+        }
+
+        if let color = ad?.paramColor {
+            self.report.color = color
+        }
+        
+        
+        // optional 체크, AppDelegate로 받아온 값에 대해서 중복 체크 후 리스트의 마지막 값 제거
+        // -> 제거를 하지 않으면 view가 실행될 때마다 값이 중복되어 적용되기 때문.
+        if let time = reportList.last?.time {
+            if let kind = reportList.last?.kind {
+                if let color = reportList.last?.color {
+                    if report.time == time && report.color == color && report.kind == kind {
+                        reportList.removeLast()
+                    }
+                }
+            }
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        reportList.append(report)
+        print("main : \(reportList)")
+        print(reportList.last!)
+        print(reportList.count)
+    }
+    
+    // MARK: - viewDid Load
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 날짜 포멧
+        // MARK: - 날짜 포멧
         let formatter = DateFormatter()
         formatter.dateFormat = "MM월 dd일"
         let current_date_format = formatter.string(from: Date())
         viewTimeLabel.text = current_date_format
-        print(current_date_format)
         
-        // Add Button
+        // MARK: - Add Button Layout
+        
         AddButton.layer.borderWidth = 1.0
         AddButton.layer.borderColor = UIColor.black.cgColor
         AddButton.layer.cornerRadius = 10
@@ -43,7 +102,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         AddButton.layer.shadowRadius = 0.0
         AddButton.layer.masksToBounds = false
         
-        // TableView
+        // MARK: - Table View
+        
         DailyTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         self.DailyTableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
         DailyTableView.delegate = self
@@ -52,8 +112,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
+    // MARK: - TableView 속성
     func numberOfSections(in tableView: UITableView) -> Int {
-        return self.test.count
+//        return reportList.count
+        return testArr.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -74,11 +136,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let cell:UITableViewCell = (self.DailyTableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as UITableViewCell?)!
         
-        
+        // 가운데 정렬
         cell.textLabel?.textAlignment = NSTextAlignment.center
         
         // note that indexPath.section is used rather than indexPath.row
-        cell.textLabel?.text = self.test[indexPath.section]
+        cell.textLabel?.text = testArr[indexPath.section]
+//        cell.textLabel?.text = reportList[indexPath.section].time
         
         
         // add border and color
@@ -96,11 +159,5 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         return cell
     }
-    
-    // method to run when table view cell is tapped
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        // note that indexPath.section is used rather than indexPath.row
-//        print("You tapped cell number \(indexPath.section).")
-//    }
 }
 

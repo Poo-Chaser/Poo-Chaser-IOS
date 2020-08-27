@@ -121,7 +121,6 @@
 		96575E5424E3C337009B4FFF /* Secene */ = {
 			isa = PBXGroup;
 			children = (
-				96D5442E24E54B8000C653C1 /* New Group */,
 				96241E1D24E53F1E001B5948 /* Register */,
 				96575E5824E3C3C2009B4FFF /* Login */,
 				96575E5524E3C35B009B4FFF /* Main */,
@@ -180,13 +179,6 @@
 				96575E6124E3C4D8009B4FFF /* LoginViewController.swift */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		96D5442E24E54B8000C653C1 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

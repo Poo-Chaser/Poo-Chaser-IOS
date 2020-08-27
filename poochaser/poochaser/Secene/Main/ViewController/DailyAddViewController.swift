@@ -8,25 +8,75 @@
 
 import UIKit
 
+struct Report {
+    var time: String
+    var kind: String
+    var color: String
+    var check: Bool
+    
+    init() {
+        time = "HH:mm"
+        kind = "제 n형"
+        color = "n색"
+        check = false
+    }
+}
+
 class DailyAddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
     var selectedKind: String?
     let kind = ["제 1형", "제 2형", "제 3형", "제 4형" , "제 5형", "제 6형", "제 7형"]
     let color = ["갈색", "적색", "흑색", "노란색", "녹색", "회색"]
     
+    
     // 배변 종류 선택 text Field
     @IBOutlet weak var timeTextField: UITextField!
     @IBOutlet weak var kindTextField: UITextField!
     @IBOutlet weak var colorTextField: UITextField!
     
+    var report = Report()
+    
     // 쾌변 유무 스위치
     @IBAction func checkSwitch(_ sender: UISwitch) {
         if sender.isOn == true {
             print("true")
+            report.check = true
         } else {
             print("false")
+            report.check = false
         }
     }
+    
+    @IBAction func addButton(_ sender: UIButton) {
+        print("==== Log ====")
+        print("Time : \(report.time)")
+        print("Kind : \(report.kind)")
+        print("Color : \(report.color)")
+        print("Check : \(report.check)")
+        print("=============")
+        
+
+        // AppDelegate 인스턴스 가져오기
+        let ad = UIApplication.shared.delegate as? AppDelegate
+        
+        ad?.paramTime = report.time
+        ad?.paramKind = report.kind
+        ad?.paramColor = report.color
+
+        print("add : \(report)")
+        self.presentingViewController?.dismiss(animated: true)
+        
+//        guard let rvc = self.storyboard?.instantiateViewController(identifier: "MainReportVC") as? ViewController else {
+//            return
+//        }
+//
+//        rvc.paramTime = self.report.time
+//        rvc.paramKind = self.report.kind
+//        rvc.paramColor = self.report.color
+//
+//        self.present(rvc, animated: true)
+    }
+    
     
     let kindPickerView = UIPickerView()
     let colorPickerView = UIPickerView()
@@ -71,8 +121,10 @@ class DailyAddViewController: UIViewController, UITextFieldDelegate, UIPickerVie
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == 0 {
             kindTextField.text = kind[row]
+            report.kind = kind[row]
         } else if pickerView.tag == 1 {
             colorTextField.text = color[row]
+            report.color = color[row]
         }
     }
 
@@ -102,6 +154,7 @@ class DailyAddViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         // 시간 변경
         timePickerView.addTarget(self, action: #selector(changed), for: .valueChanged)
        
+        report.time = current_time
         
         kindTextField.inputView = kindPickerView
         colorTextField.inputView = colorPickerView
@@ -134,5 +187,6 @@ class DailyAddViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         
         let date = dateFormatter.string(from: timePickerView.date)
         timeTextField.text = date
+        report.time = date
     }
 }

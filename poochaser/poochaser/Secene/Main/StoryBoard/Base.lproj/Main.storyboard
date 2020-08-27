@@ -185,7 +185,7 @@
         <!--Main-->
         <scene sceneID="ZyE-Nk-Dzq">
             <objects>
-                <viewController id="Urj-1h-F6Z" userLabel="Main" customClass="ViewController" customModule="poochaser" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainReportVC" id="Urj-1h-F6Z" userLabel="Main" customClass="ViewController" customModule="poochaser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F3z-Qd-JhH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -386,6 +386,9 @@
                                                 <state key="normal" title="추가">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="addButton:" destination="1qY-Qj-M89" eventType="touchUpInside" id="zqu-y9-fiD"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
