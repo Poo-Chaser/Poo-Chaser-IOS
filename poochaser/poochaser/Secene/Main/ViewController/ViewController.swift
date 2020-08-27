@@ -74,6 +74,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidAppear(_ animated: Bool) {
         reportList.append(report)
+        DailyTableView.reloadData()
         print("main : \(reportList)")
         print(reportList.last!)
         print(reportList.count)
@@ -114,8 +115,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // MARK: - TableView 속성
     func numberOfSections(in tableView: UITableView) -> Int {
-//        return reportList.count
-        return testArr.count
+        return reportList.count
+//        return testArr.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -132,6 +133,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return headerView
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell:UITableViewCell = (self.DailyTableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as UITableViewCell?)!
@@ -140,8 +142,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.textLabel?.textAlignment = NSTextAlignment.center
         
         // note that indexPath.section is used rather than indexPath.row
-        cell.textLabel?.text = testArr[indexPath.section]
-//        cell.textLabel?.text = reportList[indexPath.section].time
+//        cell.textLabel?.text = testArr[indexPath.section]
+        cell.textLabel?.text = reportList[indexPath.section].time
         
         
         // add border and color
