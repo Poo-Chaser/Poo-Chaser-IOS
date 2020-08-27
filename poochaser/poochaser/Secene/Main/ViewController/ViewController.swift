@@ -84,7 +84,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         DailyTableView.reloadData()
         
         print("main : \(reportList)")
-        print(reportList.count)
     }
     
     // MARK: - viewDid Load
@@ -121,51 +120,65 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     // MARK: - TableView 속성
-        func numberOfSections(in tableView: UITableView) -> Int {
-            return reportList.count
-        }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return reportList.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return cellSpacingHeight
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.clear
+        return headerView
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return 1
-        }
+        let cell = DailyTableView.dequeueReusableCell(withIdentifier: "List Cell") as! DailyTableViewCell
         
-        func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-            return cellSpacingHeight
-        }
+        // 가운데 정렬
+        //        cell.textLabel?.textAlignment = NSTextAlignment.center
         
-        func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-            let headerView = UIView()
-            headerView.backgroundColor = UIColor.clear
-            return headerView
-        }
+        // 전달받은 데이터 cell에 표시하기
+        cell.TimeLabel.text = reportList[indexPath.section].time
+        cell.KindsLabel.text = reportList[indexPath.section].kind
+        cell.ColorLabel.text = reportList[indexPath.section].color
         
         
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            
-            let cell = DailyTableView.dequeueReusableCell(withIdentifier: "List Cell") as! DailyTableViewCell
-            
-            // 가운데 정렬
-    //        cell.textLabel?.textAlignment = NSTextAlignment.center
-            
-            // 전달받은 데이터 cell에 표시하기
-            cell.TimeLabel.text = reportList[indexPath.section].time
-            cell.KindsLabel.text = reportList[indexPath.section].kind
-            cell.ColorLabel.text = reportList[indexPath.section].color
-            
-            
-            // add border and color
-            cell.backgroundColor = UIColor.white
-            cell.layer.borderColor = UIColor.black.cgColor
-            cell.layer.borderWidth = 1
-            cell.layer.cornerRadius = 10
-            cell.clipsToBounds = true
-            
-            cell.layer.shadowColor = UIColor.gray.cgColor
-            cell.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
-            cell.layer.shadowOpacity = 1.0
-            cell.layer.shadowRadius = 0.0
-            cell.layer.masksToBounds = false
-            
-            return cell
-        }
+        // add border and color
+        cell.backgroundColor = UIColor.white
+        cell.layer.borderColor = UIColor.black.cgColor
+        cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 10
+        cell.clipsToBounds = true
+        
+        cell.layer.shadowColor = UIColor.gray.cgColor
+        cell.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        cell.layer.shadowOpacity = 1.0
+        cell.layer.shadowRadius = 0.0
+        cell.layer.masksToBounds = false
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        DailyTableView.deselectRow(at: indexPath, animated: true)
+//        performSegue(withIdentifier: "DailyDetailView", sender: report)
+        print(reportList[indexPath.section])
+    }
+
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.destination is DailyDetailViewController {
+//            let vc = segue.destination as? DailyDetailViewController
+//            vc?.testLabel.text = "MOVE"
+//        }
+//    }
+    
 }

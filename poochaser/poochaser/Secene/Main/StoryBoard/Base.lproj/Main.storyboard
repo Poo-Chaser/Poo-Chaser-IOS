@@ -433,7 +433,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5a4-7S-1Sg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3782.608695652174" y="1366.7410714285713"/>
+            <point key="canvasLocation" x="2912" y="1480"/>
+        </scene>
+        <!--Report Detail View-->
+        <scene sceneID="80i-ZE-tvF">
+            <objects>
+                <viewController storyboardIdentifier="DailyDetailView" title="Report Detail View" useStoryboardIdentifierAsRestorationIdentifier="YES" id="c0k-Zl-Cob" customClass="DailyDetailViewController" customModule="poochaser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="edi-xd-sw8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHl-lX-Lhs">
+                                <rect key="frame" x="158" y="424" width="98" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="PV9-15-f4K"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="N05-oU-Ym9"/>
+                    <connections>
+                        <outlet property="testLabel" destination="nHl-lX-Lhs" id="90L-bP-xi4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3MQ-wD-YVH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4290" y="1499"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="YnT-fD-70G">
