@@ -260,6 +260,7 @@
                                             <outlet property="ColorLabel" destination="bkI-w4-27X" id="Sul-hk-jBb"/>
                                             <outlet property="KindsLabel" destination="hyg-JC-JGG" id="qkw-Oy-ycN"/>
                                             <outlet property="TimeLabel" destination="mlT-Df-xuq" id="e3D-In-3Sj"/>
+                                            <segue destination="c0k-Zl-Cob" kind="show" identifier="DailyDetailViewController" id="2Xk-9e-oLs"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -438,9 +439,9 @@
         <!--Report Detail View-->
         <scene sceneID="80i-ZE-tvF">
             <objects>
-                <viewController storyboardIdentifier="DailyDetailView" title="Report Detail View" useStoryboardIdentifierAsRestorationIdentifier="YES" id="c0k-Zl-Cob" customClass="DailyDetailViewController" customModule="poochaser" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DailyDetailViewController" title="Report Detail View" id="c0k-Zl-Cob" customClass="DailyDetailViewController" customModule="poochaser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="edi-xd-sw8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHl-lX-Lhs">

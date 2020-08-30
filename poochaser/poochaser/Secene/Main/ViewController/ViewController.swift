@@ -168,17 +168,31 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        DailyTableView.deselectRow(at: indexPath, animated: true)
 //        performSegue(withIdentifier: "DailyDetailView", sender: report)
-        print(reportList[indexPath.section])
-    }
+//        print(reportList[indexPath.section])
+//    }
 
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if segue.destination is DailyDetailViewController {
 //            let vc = segue.destination as? DailyDetailViewController
-//            vc?.testLabel.text = "MOVE"
+////            vc?.testLabel.text = "MOVE"
 //        }
 //    }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let cell: UITableViewCell = sender as? UITableViewCell else {
+//            return
+//        }
+//        guard let index: IndexPath = self.DailyTableView.indexPath(for: cell) else {
+//            return
+//        }
+//        guard let DailyDetailVC: DailyDetailViewController = segue.destination as? DailyDetailViewController else {
+//            return
+//        }
+//        DailyDetailViewController.index = index
+//    }
+    
     
 }
