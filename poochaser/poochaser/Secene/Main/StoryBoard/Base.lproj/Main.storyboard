@@ -79,7 +79,8 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="1S2-MP-f9n" kind="show" id="O70-aV-pU5"/>
+                                                    <action selector="LoginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="czs-aY-Ewr"/>
+                                                    <segue destination="1S2-MP-f9n" kind="show" identifier="LoginToMain" id="O70-aV-pU5"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9L8-i8-LEe">
@@ -114,6 +115,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="0VW-0r-5pb"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="vu8-GV-yS5" id="vmQ-z6-gqJ"/>
+                        <outlet property="passwordTextField" destination="jQv-yQ-1Wv" id="ypT-1Y-a4C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
