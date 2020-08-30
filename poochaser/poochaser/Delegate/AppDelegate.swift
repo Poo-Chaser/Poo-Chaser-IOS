@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         sleep(2)
         
         FirebaseApp.configure()
+        
         return true
     }
 
