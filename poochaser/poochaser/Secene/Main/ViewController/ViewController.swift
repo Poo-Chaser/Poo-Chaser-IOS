@@ -73,15 +73,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidAppear(_ animated: Bool) {
         reportList.append(report)
         
-        DailyTableView.delegate = self
-        DailyTableView.dataSource = self
+        DailyTableView?.delegate = self
+        DailyTableView?.dataSource = self
         
         // report init값 삭제
         if report.time == "HH:mm" {
             reportList.remove(at: 0)
         }
         
-        DailyTableView.reloadData()
+        DailyTableView?.reloadData()
         
         print("main : \(reportList)")
     }
@@ -94,28 +94,28 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let formatter = DateFormatter()
         formatter.dateFormat = "MM월 dd일"
         let current_date_format = formatter.string(from: Date())
-        viewTimeLabel.text = current_date_format
+        viewTimeLabel?.text = current_date_format
         
         // MARK: - Add Button Layout
         
-        AddButton.layer.borderWidth = 1.0
-        AddButton.layer.borderColor = UIColor.black.cgColor
-        AddButton.layer.cornerRadius = 10
-        AddButton.layer.backgroundColor = UIColor.white.cgColor
+        AddButton?.layer.borderWidth = 1.0
+        AddButton?.layer.borderColor = UIColor.black.cgColor
+        AddButton?.layer.cornerRadius = 10
+        AddButton?.layer.backgroundColor = UIColor.white.cgColor
         
-        AddButton.layer.shadowColor = UIColor.gray.cgColor
-        AddButton.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
-        AddButton.layer.shadowOpacity = 1.0
-        AddButton.layer.shadowRadius = 0.0
-        AddButton.layer.masksToBounds = false
+        AddButton?.layer.shadowColor = UIColor.gray.cgColor
+        AddButton?.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        AddButton?.layer.shadowOpacity = 1.0
+        AddButton?.layer.shadowRadius = 0.0
+        AddButton?.layer.masksToBounds = false
         
         // MARK: - Table View
         
-        DailyTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
-        self.DailyTableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
-        DailyTableView.delegate = self
-        DailyTableView.dataSource = self
-        DailyTableView.estimatedRowHeight = 30
+        DailyTableView?.separatorStyle = UITableViewCell.SeparatorStyle.none
+        self.DailyTableView?.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
+        DailyTableView?.delegate = self
+        DailyTableView?.dataSource = self
+        DailyTableView?.estimatedRowHeight = 30
         
     }
     
@@ -168,31 +168,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        DailyTableView.deselectRow(at: indexPath, animated: true)
-//        performSegue(withIdentifier: "DailyDetailView", sender: report)
-//        print(reportList[indexPath.section])
-//    }
-
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.destination is DailyDetailViewController {
-//            let vc = segue.destination as? DailyDetailViewController
-////            vc?.testLabel.text = "MOVE"
-//        }
-//    }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let cell: UITableViewCell = sender as? UITableViewCell else {
-//            return
-//        }
-//        guard let index: IndexPath = self.DailyTableView.indexPath(for: cell) else {
-//            return
-//        }
-//        guard let DailyDetailVC: DailyDetailViewController = segue.destination as? DailyDetailViewController else {
-//            return
-//        }
-//        DailyDetailViewController.index = index
-//    }
-    
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath)
+    }
 }

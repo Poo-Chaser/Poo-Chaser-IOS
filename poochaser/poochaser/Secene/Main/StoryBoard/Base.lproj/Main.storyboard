@@ -265,7 +265,7 @@
                                             <outlet property="ColorLabel" destination="bkI-w4-27X" id="Sul-hk-jBb"/>
                                             <outlet property="KindsLabel" destination="hyg-JC-JGG" id="qkw-Oy-ycN"/>
                                             <outlet property="TimeLabel" destination="mlT-Df-xuq" id="e3D-In-3Sj"/>
-                                            <segue destination="c0k-Zl-Cob" kind="show" identifier="DailyDetailViewController" id="2Xk-9e-oLs"/>
+                                            <segue destination="c0k-Zl-Cob" kind="show" identifier="MaintoDetail" id="2Xk-9e-oLs"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
