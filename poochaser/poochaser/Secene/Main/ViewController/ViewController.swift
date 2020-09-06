@@ -15,11 +15,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         var time: String
         var kind: String
         var color: String
+        var check: Bool
         
         init() {
             time = "HH:mm"
             kind = "제 n형"
             color = "n색"
+            check = true
         }
     }
     
@@ -83,7 +85,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         DailyTableView?.reloadData()
         
-        print("main : \(reportList)")
+//        print("main : \(reportList)")
     }
     
     // MARK: - viewDid Load

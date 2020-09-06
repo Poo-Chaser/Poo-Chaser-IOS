@@ -8,6 +8,9 @@
 
 import UIKit
 
+import FirebaseCore
+import FirebaseFirestore
+
 struct Report {
     var time: String
     var kind: String
@@ -23,6 +26,8 @@ struct Report {
 }
 
 class DailyAddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    var db: Firestore!
     
     var selectedKind: String?
     let kind = ["제 1형", "제 2형", "제 3형", "제 4형" , "제 5형", "제 6형", "제 7형"]
@@ -55,6 +60,34 @@ class DailyAddViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         print("Check : \(report.check)")
         print("=============")
         
+        
+        var ref: DocumentReference? = nil
+        ref = db?.collection("user").document("year").collection("month").document("day").collection("hour").addDocument(data: [
+            "time" : "\(report.time)",
+            "type" : "\(report.kind)",
+            "color" : "\(report.color)",
+            "check" : "\(report.check)"
+        ]) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID : \(ref!.documentID)")
+            }
+        }
+            
+//        ref = db?.collection("user").addDocument(data: [
+//            "time" : report.time,
+//            "type" : report.kind,
+//            "color" : report.color,
+//            "check" : report.check
+//        ]) { err in
+//            if let err = err {
+//                print("Error adding document: \(err)")
+//            } else {
+//                print("Document added with ID : \(ref!.documentID)")
+//            }
+//        }
+        
 
         // AppDelegate 인스턴스 가져오기
         let ad = UIApplication.shared.delegate as? AppDelegate
@@ -66,15 +99,7 @@ class DailyAddViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         print("add : \(report)")
         self.presentingViewController?.dismiss(animated: true)
         
-//        guard let rvc = self.storyboard?.instantiateViewController(identifier: "MainReportVC") as? ViewController else {
-//            return
-//        }
-//
-//        rvc.paramTime = self.report.time
-//        rvc.paramKind = self.report.kind
-//        rvc.paramColor = self.report.color
-//
-//        self.present(rvc, animated: true)
+        
     }
     
     
