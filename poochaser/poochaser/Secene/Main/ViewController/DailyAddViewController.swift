@@ -8,6 +8,7 @@
 
 import UIKit
 
+import FirebaseAuth
 import FirebaseCore
 import FirebaseFirestore
 
@@ -21,13 +22,14 @@ struct Report {
         time = "HH:mm"
         kind = "제 n형"
         color = "n색"
-        check = false
+        check = true
     }
 }
 
 class DailyAddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    var db: Firestore!
+    var db = Firestore.firestore()
+    let user = Auth.auth().currentUser
     
     var selectedKind: String?
     let kind = ["제 1형", "제 2형", "제 3형", "제 4형" , "제 5형", "제 6형", "제 7형"]
@@ -61,32 +63,39 @@ class DailyAddViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         print("=============")
         
         
-        var ref: DocumentReference? = nil
-        ref = db?.collection("user").document("year").collection("month").document("day").collection("hour").addDocument(data: [
-            "time" : "\(report.time)",
-            "type" : "\(report.kind)",
-            "color" : "\(report.color)",
-            "check" : "\(report.check)"
+        let yearDate = DateFormatter()
+        yearDate.dateFormat = "yyyy"
+        let yd = yearDate.string(from: Date())
+        
+        let monthDate = DateFormatter()
+        monthDate.dateFormat = "MM"
+        let md = monthDate.string(from: Date())
+        
+        let weekDate = DateFormatter()
+        weekDate.dateFormat = "ww"
+        let wd = weekDate.string(from: Date())
+        
+        let dayDate = DateFormatter()
+        dayDate.dateFormat = "dd"
+        let dd = dayDate.string(from: Date())
+        
+        let hourDate = DateFormatter()
+        hourDate.dateFormat = "HH:mm"
+        let hd = hourDate.string(from: Date())
+        
+        let uid = user?.uid
+        db.collection(uid!).document(yd).collection(md).document(wd).collection(dd).document(hd).setData([
+            "Time" : "\(report.time)",
+            "Type" : "\(report.kind)",
+            "Color" : "\(report.color)",
+            "Check" : "\(report.check)"
         ]) { err in
             if let err = err {
                 print("Error adding document: \(err)")
             } else {
-                print("Document added with ID : \(ref!.documentID)")
+                print("ADD Complete")
             }
         }
-            
-//        ref = db?.collection("user").addDocument(data: [
-//            "time" : report.time,
-//            "type" : report.kind,
-//            "color" : report.color,
-//            "check" : report.check
-//        ]) { err in
-//            if let err = err {
-//                print("Error adding document: \(err)")
-//            } else {
-//                print("Document added with ID : \(ref!.documentID)")
-//            }
-//        }
         
 
         // AppDelegate 인스턴스 가져오기
