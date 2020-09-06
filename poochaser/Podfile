@@ -10,6 +10,9 @@ target 'poochaser' do
   # https://firebase.google.com/docs/ios/setup#available-products
   # Pods for poochaser
   pod 'Firebase/Auth'
+  pod 'Firebase/Core'
   pod 'Firebase/Firestore'
+  
+  pod 'FirebaseFirestoreSwift'
 
 end

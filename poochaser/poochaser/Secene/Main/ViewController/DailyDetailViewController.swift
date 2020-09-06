@@ -18,8 +18,17 @@ class DailyDetailViewController: ViewController {
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
     
+    var detailTime: String = ""
+    var detailKind: String = ""
+    var detailColor: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-         print("It's detail View")
+        print("It's detail View")
+        print(detailTime, detailKind, detailColor)
+        
+        self.timeLabel.text = detailTime
+        self.kindLabel.text = detailKind
+        self.colorLabel.text = detailColor
     }
 }
