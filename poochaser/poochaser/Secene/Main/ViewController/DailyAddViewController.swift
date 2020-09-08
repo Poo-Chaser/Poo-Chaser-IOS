@@ -63,6 +63,7 @@ class DailyAddViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         print("=============")
         
         
+        // Firestore에 collection과 document 이름을 년, 월, 주, 일, 시간으로 표시하기.
         let yearDate = DateFormatter()
         yearDate.dateFormat = "yyyy"
         let yd = yearDate.string(from: Date())
@@ -83,6 +84,7 @@ class DailyAddViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         hourDate.dateFormat = "HH:mm"
         let hd = hourDate.string(from: Date())
         
+        // Firestore에 time, kind, color, check를 추가
         let uid = user?.uid
         db.collection(uid!).document(yd).collection(md).document(wd).collection(dd).document(hd).setData([
             "Time" : "\(report.time)",
