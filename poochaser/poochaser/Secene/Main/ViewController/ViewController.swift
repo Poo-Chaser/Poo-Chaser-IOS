@@ -100,6 +100,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         // MARK: - Add Button Layout
         
+        AddButton?.heightAnchor.constraint(equalToConstant: 50.0).isActive = true
         AddButton?.layer.borderWidth = 1.0
         AddButton?.layer.borderColor = UIColor.black.cgColor
         AddButton?.layer.cornerRadius = 10
