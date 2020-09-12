@@ -36,8 +36,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let cellReuseIdentifier = "cell"
     let cellSpacingHeight: CGFloat = 10
     
+    @IBAction func refreshBtn(_ sender: UIButton) {
+        DailyTableView.reloadData()
+        print("refresh")
+    }
+    @IBOutlet weak var refreshBtn: UIButton!
+    @IBOutlet weak var settingBtn: UIButton!
+    
     @IBOutlet weak var viewTimeLabel: UILabel!
-//    @IBOutlet weak var cellTimeLabel: UILabel!
     @IBOutlet weak var AddButton: UIButton!
     
     @IBOutlet weak var DailyTableView: UITableView!
@@ -91,6 +97,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // MARK: - viewDid Load
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       // MARK: - Top View Button constraint
+        refreshBtn.widthAnchor.constraint(equalToConstant: 22.0).isActive = true
+        settingBtn.widthAnchor.constraint(equalToConstant: 22.0).isActive = true
         
         // MARK: - 날짜 포멧
         let formatter = DateFormatter()
