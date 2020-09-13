@@ -86,6 +86,7 @@ class DailyAddViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         
         // Firestore에 time, kind, color, check를 추가
         let uid = user?.uid
+        print(uid!)
         db.collection(uid!).document(yd).collection(md).document(wd).collection(dd).document(hd).setData([
             "Time" : "\(report.time)",
             "Type" : "\(report.kind)",

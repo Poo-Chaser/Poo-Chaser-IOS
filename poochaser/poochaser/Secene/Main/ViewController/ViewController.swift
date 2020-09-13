@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseCore
+import FirebaseFirestore
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -25,6 +28,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    var db = Firestore.firestore()
+    
     // AppDelegate에서 데이터를 전달 받을 변수
     var paramTime: String = ""
     var paramKind: String = ""
@@ -37,7 +42,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let cellSpacingHeight: CGFloat = 10
     
     @IBAction func refreshBtn(_ sender: UIButton) {
-        DailyTableView.reloadData()
+//        DailyTableView.reloadData()
         print("refresh")
     }
     @IBOutlet weak var refreshBtn: UIButton!
@@ -89,6 +94,54 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             reportList.remove(at: 0)
         }
         
+        // Firebase에서 데이터 읽거나 쓰기 위함.
+        let userID = Auth.auth().currentUser?.uid
+        
+        // Firestore에 collection과 document 이름을 년, 월, 주, 일, 시간으로 표시하기.
+        let yearDate = DateFormatter()
+        yearDate.dateFormat = "yyyy"
+        let yd = yearDate.string(from: Date())
+        
+        let monthDate = DateFormatter()
+        monthDate.dateFormat = "MM"
+        let md = monthDate.string(from: Date())
+        
+        let weekDate = DateFormatter()
+        weekDate.dateFormat = "ww"
+        let wd = weekDate.string(from: Date())
+        
+        let dayDate = DateFormatter()
+        dayDate.dateFormat = "dd"
+        let dd = dayDate.string(from: Date())
+        
+        let hourDate = DateFormatter()
+        hourDate.dateFormat = "HH:mm"
+        let hd = hourDate.string(from: Date())
+        
+//        let docRef = db.collection(userID!).document(yd).collection(md).document(wd).collection(dd).document(hd)
+        let TodayDB = db.collection(userID!).document(yd).collection(md).document(wd).collection(dd)
+        
+//        docRef.getDocument { (document, error) in
+//            if let document = document, document.exists {
+//                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+//                print("Document data: \(dataDescription)")
+//            } else {
+//                print("Document does not exist")
+//            }
+//        }
+        
+        TodayDB.getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                    
+                }
+            }
+        }
+        
+        
         DailyTableView?.reloadData()
         
 //        print("main : \(reportList)")
@@ -99,8 +152,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         
        // MARK: - Top View Button constraint
-        refreshBtn.widthAnchor.constraint(equalToConstant: 22.0).isActive = true
-        settingBtn.widthAnchor.constraint(equalToConstant: 22.0).isActive = true
+        refreshBtn?.widthAnchor.constraint(equalToConstant: 22.0).isActive = true
+        settingBtn?.widthAnchor.constraint(equalToConstant: 22.0).isActive = true
         
         // MARK: - 날짜 포멧
         let formatter = DateFormatter()
