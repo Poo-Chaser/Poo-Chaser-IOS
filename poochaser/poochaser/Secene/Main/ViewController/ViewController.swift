@@ -94,57 +94,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             reportList.remove(at: 0)
         }
         
-        // Firebase에서 데이터 읽거나 쓰기 위함.
-        let userID = Auth.auth().currentUser?.uid
-        
-        // Firestore에 collection과 document 이름을 년, 월, 주, 일, 시간으로 표시하기.
-        let yearDate = DateFormatter()
-        yearDate.dateFormat = "yyyy"
-        let yd = yearDate.string(from: Date())
-        
-        let monthDate = DateFormatter()
-        monthDate.dateFormat = "MM"
-        let md = monthDate.string(from: Date())
-        
-        let weekDate = DateFormatter()
-        weekDate.dateFormat = "ww"
-        let wd = weekDate.string(from: Date())
-        
-        let dayDate = DateFormatter()
-        dayDate.dateFormat = "dd"
-        let dd = dayDate.string(from: Date())
-        
-        let hourDate = DateFormatter()
-        hourDate.dateFormat = "HH:mm"
-        let hd = hourDate.string(from: Date())
-        
-//        let docRef = db.collection(userID!).document(yd).collection(md).document(wd).collection(dd).document(hd)
-        let TodayDB = db.collection(userID!).document(yd).collection(md).document(wd).collection(dd)
-        
-//        docRef.getDocument { (document, error) in
-//            if let document = document, document.exists {
-//                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
-//                print("Document data: \(dataDescription)")
-//            } else {
-//                print("Document does not exist")
-//            }
-//        }
-        
-        TodayDB.getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
-                    
-                }
-            }
-        }
-        
-        
         DailyTableView?.reloadData()
-        
-//        print("main : \(reportList)")
     }
     
     // MARK: - viewDid Load
@@ -182,6 +132,54 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         DailyTableView?.delegate = self
         DailyTableView?.dataSource = self
         DailyTableView?.estimatedRowHeight = 30
+        
+        // Firebase에서 데이터 읽거나 쓰기 위함.
+        let userID = Auth.auth().currentUser?.uid
+        
+        // Firestore에 collection과 document 이름을 년, 월, 주, 일, 시간으로 표시하기.
+        let yearDate = DateFormatter()
+        yearDate.dateFormat = "yyyy"
+        let yd = yearDate.string(from: Date())
+        
+        let monthDate = DateFormatter()
+        monthDate.dateFormat = "MM"
+        let md = monthDate.string(from: Date())
+        
+        let weekDate = DateFormatter()
+        weekDate.dateFormat = "ww"
+        let wd = weekDate.string(from: Date())
+        
+        let dayDate = DateFormatter()
+        dayDate.dateFormat = "dd"
+        let dd = dayDate.string(from: Date())
+        
+        //        let hourDate = DateFormatter()
+        //        hourDate.dateFormat = "HH:mm"
+        //        let hd = hourDate.string(from: Date())
+        
+        let todayDB = db.collection(userID!).document(yd).collection(md).document(wd).collection(dd)
+        
+        
+        todayDB.getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                let count = querySnapshot!.documents.count
+                print(count)
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                    document.get("Time")
+                    self.report.time = document.get("Time") as! String
+                    self.report.color = document.get("Color") as! String
+                    self.report.kind = document.get("Type") as! String
+//                    self.report.check = document.get("Check") as! Bool
+//                    print(type(of: document.get("Check")))
+                    self.reportList.append(self.report)
+                }
+            }
+        }
+        
+        DailyTableView.reloadData()
         
     }
     
