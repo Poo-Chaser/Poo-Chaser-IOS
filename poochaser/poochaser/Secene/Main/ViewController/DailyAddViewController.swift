@@ -91,7 +91,7 @@ class DailyAddViewController: UIViewController, UITextFieldDelegate, UIPickerVie
             "Time" : "\(report.time)",
             "Type" : "\(report.kind)",
             "Color" : "\(report.color)",
-            "Check" : "\(report.check)"
+            "Check" : report.check
         ]) { err in
             if let err = err {
                 print("Error adding document: \(err)")

@@ -172,14 +172,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     self.report.time = document.get("Time") as! String
                     self.report.color = document.get("Color") as! String
                     self.report.kind = document.get("Type") as! String
-//                    self.report.check = document.get("Check") as! Bool
-//                    print(type(of: document.get("Check")))
+                    self.report.check = document.get("Check") as! Bool
                     self.reportList.append(self.report)
                 }
             }
         }
         
-        DailyTableView.reloadData()
+        DailyTableView?.reloadData()
         
     }
     
