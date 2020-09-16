@@ -35,6 +35,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var paramKind: String = ""
     var paramColor: String = ""
     
+    var documentID: String = ""
+    
     var report = Report()
     var reportList = [Report]()
     
@@ -83,8 +85,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    
     override func viewDidAppear(_ animated: Bool) {
         reportList.append(report)
+        
         
         DailyTableView?.delegate = self
         DailyTableView?.dataSource = self
@@ -232,13 +236,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        self.performSegue(withIdentifier: "MaintoDetail", sender: self)
+        self.performSegue(withIdentifier: "MaintoDetail", sender: self)
         
         guard let rvc = self.storyboard?.instantiateViewController(identifier: "DailyDetailViewController") as? DailyDetailViewController else {
             return
         }
         
-        rvc.detailTime = self.paramTime
+        rvc.detailTime = self.reportList[indexPath.section].time
         rvc.detailKind = self.paramKind
         rvc.detailColor = self.paramColor
         
