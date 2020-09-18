@@ -245,16 +245,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "MaintoDetail", sender: self)
         
         guard let rvc = self.storyboard?.instantiateViewController(identifier: "DailyDetailViewController") as? DailyDetailViewController else {
             return
         }
         
         rvc.detailTime = self.reportList[indexPath.section].time
-        rvc.detailKind = self.paramKind
-        rvc.detailColor = self.paramColor
+        rvc.detailKind = self.reportList[indexPath.section].kind
+        rvc.detailColor = self.reportList[indexPath.section].color
         
-        self.present(rvc, animated: true)
+        self.show(rvc, sender: true)
     }
 }

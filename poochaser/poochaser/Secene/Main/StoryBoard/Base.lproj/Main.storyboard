@@ -305,7 +305,6 @@
                                                             <outlet property="ColorLabel" destination="bkI-w4-27X" id="Sul-hk-jBb"/>
                                                             <outlet property="KindsLabel" destination="hyg-JC-JGG" id="qkw-Oy-ycN"/>
                                                             <outlet property="TimeLabel" destination="mlT-Df-xuq" id="e3D-In-3Sj"/>
-                                                            <segue destination="c0k-Zl-Cob" kind="show" identifier="MaintoDetail" id="2Xk-9e-oLs"/>
                                                         </connections>
                                                     </tableViewCell>
                                                 </prototypes>
@@ -472,7 +471,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="NoZ-UD-9OR">
-                                <rect key="frame" x="20" y="108" width="374" height="464"/>
+                                <rect key="frame" x="20" y="64" width="374" height="464"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poo Chaser" translatesAutoresizingMaskIntoConstraints="NO" id="sRY-DH-b4T">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="166.5"/>
@@ -480,7 +479,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="QxI-ee-3UQ" userLabel="Set Time View">
                                         <rect key="frame" x="0.0" y="196.5" width="374" height="24"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="시간 설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="74" translatesAutoresizingMaskIntoConstraints="NO" id="xEc-nu-R5M">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="시간 설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEc-nu-R5M">
                                                 <rect key="frame" x="0.0" y="0.0" width="203.5" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
