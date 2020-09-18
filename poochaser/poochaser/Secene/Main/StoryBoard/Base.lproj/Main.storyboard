@@ -132,13 +132,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="mRA-ND-wh0">
-                                <rect key="frame" x="8" y="0.0" width="398" height="618"/>
+                                <rect key="frame" x="8" y="0.0" width="398" height="784.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poo Chaser" translatesAutoresizingMaskIntoConstraints="NO" id="1xI-gY-36H">
-                                        <rect key="frame" x="0.0" y="0.0" width="398" height="166.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="333"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="n0g-Qi-cuW">
-                                        <rect key="frame" x="0.0" y="316.5" width="398" height="301.5"/>
+                                        <rect key="frame" x="0.0" y="483" width="398" height="301.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사용자의 이메일로 비밀번호 재설정 링크를 보내드립니다." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8CT-a1-APe">
                                                 <rect key="frame" x="0.0" y="0.0" width="398" height="19.5"/>
@@ -200,17 +200,17 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="q4X-g5-X6G" userLabel="Top View">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="299"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QUa-U4-J4V" userLabel="restartBtn">
-                                                <rect key="frame" x="0.0" y="138.5" width="0.0" height="22"/>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QUa-U4-J4V" userLabel="restartBtn">
+                                                <rect key="frame" x="0.0" y="138.5" width="131.5" height="22"/>
                                                 <state key="normal" title="Button" image="arrow.clockwise" catalog="system"/>
                                                 <connections>
                                                     <action selector="refreshBtn:" destination="Urj-1h-F6Z" eventType="touchUpInside" id="9dF-1c-rL2"/>
                                                 </connections>
                                             </button>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Poo Chaser" translatesAutoresizingMaskIntoConstraints="NO" id="Qw6-lx-F2s">
-                                                <rect key="frame" x="0.0" y="0.0" width="298" height="299"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poo Chaser" translatesAutoresizingMaskIntoConstraints="NO" id="Qw6-lx-F2s">
+                                                <rect key="frame" x="131.5" y="66.5" width="166.5" height="166.5"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fft-9r-a51" userLabel="settingBtn">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fft-9r-a51" userLabel="settingBtn">
                                                 <rect key="frame" x="298" y="138.5" width="76" height="22"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <state key="normal" title="Button" image="gear" catalog="system"/>
@@ -330,13 +330,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="hEk-ex-kNq">
-                                <rect key="frame" x="20" y="20" width="374" height="474"/>
+                                <rect key="frame" x="20" y="20" width="374" height="640.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poo Chaser" translatesAutoresizingMaskIntoConstraints="NO" id="6Kl-eW-UxX">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="166.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="333"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XBg-Vn-LMx" userLabel="Set Time View">
-                                        <rect key="frame" x="0.0" y="196.5" width="374" height="34"/>
+                                        <rect key="frame" x="0.0" y="363" width="374" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시간 설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpy-N1-SVr">
                                                 <rect key="frame" x="0.0" y="0.0" width="74" height="34"/>
@@ -352,7 +352,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="owH-sf-KTo" userLabel="Select View">
-                                        <rect key="frame" x="0.0" y="260.5" width="374" height="213.5"/>
+                                        <rect key="frame" x="0.0" y="427" width="374" height="213.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kwj-s3-fr4" userLabel="Kind View">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
@@ -454,13 +454,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="NoZ-UD-9OR">
-                                <rect key="frame" x="20" y="20" width="374" height="464"/>
+                                <rect key="frame" x="20" y="20" width="374" height="630.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poo Chaser" translatesAutoresizingMaskIntoConstraints="NO" id="sRY-DH-b4T">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="166.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="333"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="QxI-ee-3UQ" userLabel="Set Time View">
-                                        <rect key="frame" x="0.0" y="196.5" width="374" height="24"/>
+                                        <rect key="frame" x="0.0" y="363" width="374" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="시간 설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="74" translatesAutoresizingMaskIntoConstraints="NO" id="xEc-nu-R5M">
                                                 <rect key="frame" x="0.0" y="0.0" width="203.5" height="24"/>
@@ -477,7 +477,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="plr-u2-piO" userLabel="Select View">
-                                        <rect key="frame" x="0.0" y="250.5" width="374" height="213.5"/>
+                                        <rect key="frame" x="0.0" y="417" width="374" height="213.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="T52-No-mtO" userLabel="Kind View">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
@@ -706,13 +706,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="iQu-iD-NHL">
-                                <rect key="frame" x="20" y="20" width="374" height="486.5"/>
+                                <rect key="frame" x="20" y="20" width="374" height="653"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poo Chaser" translatesAutoresizingMaskIntoConstraints="NO" id="hLl-F0-ETs">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="166.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="333"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="CJe-Lw-WZU" userLabel="Middle View">
-                                        <rect key="frame" x="0.0" y="216.5" width="374" height="172"/>
+                                        <rect key="frame" x="0.0" y="383" width="374" height="172"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aBz-hT-IIu">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
@@ -732,7 +732,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="registerSegue" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8F-nq-EyT">
-                                        <rect key="frame" x="0.0" y="438.5" width="374" height="48"/>
+                                        <rect key="frame" x="0.0" y="605" width="374" height="48"/>
                                         <color key="backgroundColor" red="0.114701364" green="0.60800056410000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="30b-m0-g85"/>
