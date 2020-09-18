@@ -57,6 +57,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // MARK: - viewWillApper
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+        
         let ad = UIApplication.shared.delegate as? AppDelegate
         
         if let time = ad?.paramTime {
@@ -87,6 +90,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         reportList.append(report)
         
         
@@ -99,6 +103,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         
         DailyTableView?.reloadData()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.isNavigationBarHidden = false
     }
     
     // MARK: - viewDid Load
