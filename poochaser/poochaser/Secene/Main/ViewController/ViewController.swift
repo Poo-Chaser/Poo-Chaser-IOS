@@ -173,6 +173,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let todayDB = db.collection(userID!).document(yd).collection(md).document(wd).collection(dd)
         
         
+        print("View Controller")
         todayDB.getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
