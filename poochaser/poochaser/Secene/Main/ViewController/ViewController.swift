@@ -175,6 +175,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         print("View Controller")
         todayDB.getDocuments() { (querySnapshot, err) in
+            self.reportList.removeAll()
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {

@@ -31,6 +31,10 @@ class DailyDetailViewController: ViewController {
     var detailTime: String = ""
     var detailKind: String = ""
     var detailColor: String = ""
+    var changeTime: String = ""
+    
+    
+//    print(changeTime)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,10 +44,21 @@ class DailyDetailViewController: ViewController {
         self.timeLabel.text = detailTime
         self.kindLabel.text = detailKind
         self.colorLabel.text = detailColor
+        
+        
     }
     
     
     func checkDB() {
+        
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "h:mm a"
+        let date = dateFormatter.date(from: detailTime)
+
+        dateFormatter.dateFormat = "HH:mm"
+        let date24 = dateFormatter.string(from: date!)
+        
         // Firestore에 collection과 document 이름을 년, 월, 주, 일, 시간으로 표시하기.
         let yearDate = DateFormatter()
         yearDate.dateFormat = "yyyy"
@@ -63,6 +78,7 @@ class DailyDetailViewController: ViewController {
         
         let todayDB = db.collection(userID!).document(yd).collection(md).document(wd).collection(dd)
         
+        
         // 선택한 디비인지 확인하기
         todayDB.getDocuments() { (querySnapshot, err) in
             if let err = err {
@@ -75,7 +91,8 @@ class DailyDetailViewController: ViewController {
                         if self.detailKind == document.get("Type") as! String {
                             if self.detailColor == document.get("Color") as! String {
                                 print(self.detailTime, self.detailKind, self.detailColor)
-                                self.db.collection(self.userID!).document(yd).collection(md).document(wd).delete() { err in
+                                self.db.collection(self.userID!).document(yd).collection(md).document(wd).collection(dd).document(date24).delete() { err in
+//                                self.db.collection(self.userID!).document(yd).collection(md).document(wd).delete() { err in
                                     if let err = err {
                                         print("Error removing document: \(err)")
                                     } else {
