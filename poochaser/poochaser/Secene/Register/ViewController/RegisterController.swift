@@ -9,11 +9,23 @@
 import UIKit
 import FirebaseAuth
 
-class RegisterController: UIViewController {
+class RegisterController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var checkPasswordTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField! {
+        didSet {
+            emailTextField.delegate = self
+        }
+    }
+    @IBOutlet weak var passwordTextField: UITextField! {
+        didSet {
+            passwordTextField.delegate = self
+        }
+    }
+    @IBOutlet weak var checkPasswordTextField: UITextField! {
+        didSet {
+            checkPasswordTextField.delegate = self
+        }
+    }
     
     @IBAction func registerPressed(_ sender: UIButton) {
         
@@ -30,6 +42,17 @@ class RegisterController: UIViewController {
             }
             
         }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        checkPasswordTextField.resignFirstResponder()
+        return true
     }
     
     override func viewDidLoad() {
