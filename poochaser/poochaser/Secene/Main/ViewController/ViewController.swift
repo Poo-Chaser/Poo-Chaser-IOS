@@ -147,51 +147,59 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         DailyTableView?.estimatedRowHeight = 30
         
         // Firebase에서 데이터 읽거나 쓰기 위함.
-        let userID = Auth.auth().currentUser?.uid
-        
-        // Firestore에 collection과 document 이름을 년, 월, 주, 일, 시간으로 표시하기.
-        let yearDate = DateFormatter()
-        yearDate.dateFormat = "yyyy"
-        let yd = yearDate.string(from: Date())
-        
-        let monthDate = DateFormatter()
-        monthDate.dateFormat = "MM"
-        let md = monthDate.string(from: Date())
-        
-        let weekDate = DateFormatter()
-        weekDate.dateFormat = "ww"
-        let wd = weekDate.string(from: Date())
-        
-        let dayDate = DateFormatter()
-        dayDate.dateFormat = "dd"
-        let dd = dayDate.string(from: Date())
-        
-        //        let hourDate = DateFormatter()
-        //        hourDate.dateFormat = "HH:mm"
-        //        let hd = hourDate.string(from: Date())
-        
-        let todayDB = db.collection(userID!).document(yd).collection(md).document(wd).collection(dd)
         
         
-        print("View Controller")
-        todayDB.getDocuments() { (querySnapshot, err) in
-            self.reportList.removeAll()
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                let count = querySnapshot!.documents.count
-                print(count)
-                for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
-                    document.get("Time")
-                    self.report.time = document.get("Time") as! String
-                    self.report.color = document.get("Color") as! String
-                    self.report.kind = document.get("Type") as! String
-                    self.report.check = document.get("Check") as! Bool
-                    self.reportList.append(self.report)
+        if Auth.auth().currentUser != nil {
+            let userID = Auth.auth().currentUser?.uid
+            
+            // Firestore에 collection과 document 이름을 년, 월, 주, 일, 시간으로 표시하기.
+            let yearDate = DateFormatter()
+            yearDate.dateFormat = "yyyy"
+            let yd = yearDate.string(from: Date())
+            
+            let monthDate = DateFormatter()
+            monthDate.dateFormat = "MM"
+            let md = monthDate.string(from: Date())
+            
+            let weekDate = DateFormatter()
+            weekDate.dateFormat = "ww"
+            let wd = weekDate.string(from: Date())
+            
+            let dayDate = DateFormatter()
+            dayDate.dateFormat = "dd"
+            let dd = dayDate.string(from: Date())
+            
+            //        let hourDate = DateFormatter()
+            //        hourDate.dateFormat = "HH:mm"
+            //        let hd = hourDate.string(from: Date())
+            
+            let todayDB = db.collection(userID!).document(yd).collection(md).document(wd).collection(dd)
+            
+            
+            print("View Controller")
+            todayDB.getDocuments() { (querySnapshot, err) in
+                self.reportList.removeAll()
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    let count = querySnapshot!.documents.count
+                    print(count)
+                    for document in querySnapshot!.documents {
+                        print("\(document.documentID) => \(document.data())")
+                        document.get("Time")
+                        self.report.time = document.get("Time") as! String
+                        self.report.color = document.get("Color") as! String
+                        self.report.kind = document.get("Type") as! String
+                        self.report.check = document.get("Check") as! Bool
+                        self.reportList.append(self.report)
+                    }
                 }
             }
+        } else {
+          print("currentUser ERROR")
         }
+        
+        
         
         DailyTableView?.reloadData()
         

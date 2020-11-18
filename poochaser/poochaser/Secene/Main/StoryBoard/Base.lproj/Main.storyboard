@@ -97,6 +97,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="LoginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cix-mN-8HJ"/>
                                                     <segue destination="1S2-MP-f9n" kind="show" identifier="LoginToMain" id="O70-aV-pU5"/>
                                                 </connections>
                                             </button>
@@ -792,6 +793,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="aV0-Ex-XMR"/>
         <segue reference="O70-aV-pU5"/>
         <segue reference="UbS-uc-sRX"/>
         <segue reference="ouV-NC-L6M"/>
