@@ -793,7 +793,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="aV0-Ex-XMR"/>
         <segue reference="O70-aV-pU5"/>
         <segue reference="UbS-uc-sRX"/>
         <segue reference="ouV-NC-L6M"/>
