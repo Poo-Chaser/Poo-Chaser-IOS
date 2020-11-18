@@ -19,6 +19,7 @@
 		96575E4B24E3C054009B4FFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96575E4924E3C054009B4FFF /* LaunchScreen.storyboard */; };
 		96575E5D24E3C3E9009B4FFF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96575E5C24E3C3E9009B4FFF /* Login.storyboard */; };
 		96575E6224E3C4D8009B4FFF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96575E6124E3C4D8009B4FFF /* LoginViewController.swift */; };
+		96B9FCA125651585001C2A87 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9FCA025651585001C2A87 /* CalendarViewController.swift */; };
 		96D5443024E6B13100C653C1 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D5442F24E6B13100C653C1 /* SettingViewController.swift */; };
 		96EDFEA824F827C10000FFFB /* DailyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDFEA724F827C10000FFFB /* DailyDetailViewController.swift */; };
 		96EDFEAA24FBF1E30000FFFB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96EDFEA924FBF1E30000FFFB /* GoogleService-Info.plist */; };
@@ -40,6 +41,7 @@
 		96575E4C24E3C054009B4FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96575E5C24E3C3E9009B4FFF /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		96575E6124E3C4D8009B4FFF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		96B9FCA025651585001C2A87 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		96D5442F24E6B13100C653C1 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		96EDFEA724F827C10000FFFB /* DailyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDetailViewController.swift; sourceTree = "<group>"; };
 		96EDFEA924FBF1E30000FFFB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				964101E224EED38100C691C0 /* DailyAddViewController.swift */,
 				964101E424EF606200C691C0 /* DailyTableViewCell.swift */,
 				96EDFEA724F827C10000FFFB /* DailyDetailViewController.swift */,
+				96B9FCA025651585001C2A87 /* CalendarViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96B9FCA125651585001C2A87 /* CalendarViewController.swift in Sources */,
 				96241E1C24E51E0D001B5948 /* RegisterController.swift in Sources */,
 				964101E524EF606200C691C0 /* DailyTableViewCell.swift in Sources */,
 				96575E6224E3C4D8009B4FFF /* LoginViewController.swift in Sources */,

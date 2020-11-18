@@ -679,13 +679,13 @@
         <!--Calendar-->
         <scene sceneID="oRZ-Tp-dEn">
             <objects>
-                <viewController id="nWU-pm-VH8" userLabel="Calendar" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Calendar" id="nWU-pm-VH8" userLabel="Calendar" customClass="CalendarViewController" customModule="poochaser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x7G-zr-YfP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nTl-fV-Oif" customClass="FSCalendar">
-                                <rect key="frame" x="20" y="20" width="374" height="374"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="nTl-fV-Oif" customClass="FSCalendar">
+                                <rect key="frame" x="20" y="79" width="374" height="374"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -695,6 +695,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Calendar" image="calendar" catalog="system" selectedImage="calendar" id="Xo0-gi-ENM"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="calendar" destination="nTl-fV-Oif" id="5OF-7z-8U4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CSB-pq-tGu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -793,6 +796,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="aV0-Ex-XMR"/>
         <segue reference="O70-aV-pU5"/>
         <segue reference="UbS-uc-sRX"/>
         <segue reference="ouV-NC-L6M"/>
