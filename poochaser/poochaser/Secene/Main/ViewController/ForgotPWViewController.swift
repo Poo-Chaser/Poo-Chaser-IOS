@@ -6,4 +6,12 @@
 //  Copyright © 2020 Jeonpangeun. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class ForgotPWViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+//        viewDidLoad()
+    }
+}

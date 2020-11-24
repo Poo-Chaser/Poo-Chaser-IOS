@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		068F0E2D256D66700093C8BD /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 068F0E2C256D66700093C8BD /* Register.storyboard */; };
+		068F0E61256D71560093C8BD /* ForgotPWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068F0E60256D71560093C8BD /* ForgotPWViewController.swift */; };
 		5C5AB597FBB0DEA354C63C2B /* Pods_poochaser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C09E21F18239AA3B48755F /* Pods_poochaser.framework */; };
 		96241E1C24E51E0D001B5948 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96241E1B24E51E0D001B5948 /* RegisterViewController.swift */; };
 		964101E324EED38100C691C0 /* DailyAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964101E224EED38100C691C0 /* DailyAddViewController.swift */; };
@@ -18,7 +19,6 @@
 		96575E4624E3C051009B4FFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96575E4424E3C051009B4FFF /* Main.storyboard */; };
 		96575E4824E3C054009B4FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96575E4724E3C054009B4FFF /* Assets.xcassets */; };
 		96575E4B24E3C054009B4FFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96575E4924E3C054009B4FFF /* LaunchScreen.storyboard */; };
-		96575E5D24E3C3E9009B4FFF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96575E5C24E3C3E9009B4FFF /* Login.storyboard */; };
 		96575E6224E3C4D8009B4FFF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96575E6124E3C4D8009B4FFF /* LoginViewController.swift */; };
 		96B9FCA125651585001C2A87 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9FCA025651585001C2A87 /* CalendarViewController.swift */; };
 		96D5443024E6B13100C653C1 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D5442F24E6B13100C653C1 /* SettingViewController.swift */; };
@@ -28,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		068F0E2C256D66700093C8BD /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		068F0E60256D71560093C8BD /* ForgotPWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPWViewController.swift; sourceTree = "<group>"; };
 		23B3B21A0A05C50343CE155D /* Pods-poochaser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-poochaser.release.xcconfig"; path = "Target Support Files/Pods-poochaser/Pods-poochaser.release.xcconfig"; sourceTree = "<group>"; };
 		74C09E21F18239AA3B48755F /* Pods_poochaser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_poochaser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96241E1B24E51E0D001B5948 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -41,7 +42,6 @@
 		96575E4724E3C054009B4FFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96575E4A24E3C054009B4FFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96575E4C24E3C054009B4FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		96575E5C24E3C3E9009B4FFF /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		96575E6124E3C4D8009B4FFF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		96B9FCA025651585001C2A87 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		96D5442F24E6B13100C653C1 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +77,29 @@
 				068F0E2C256D66700093C8BD /* Register.storyboard */,
 			);
 			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		068F0E63256D72950093C8BD /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				068F0E65256D72A90093C8BD /* ViewController */,
+				068F0E64256D72A00093C8BD /* StoryBoard */,
+			);
+			path = Report;
+			sourceTree = "<group>";
+		};
+		068F0E64256D72A00093C8BD /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		068F0E65256D72A90093C8BD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		8FC9A83A35D9AA23095CC2EF /* Frameworks */ = {
@@ -155,6 +178,7 @@
 		96575E5424E3C337009B4FFF /* Secene */ = {
 			isa = PBXGroup;
 			children = (
+				068F0E63256D72950093C8BD /* Report */,
 				96241E1D24E53F1E001B5948 /* Register */,
 				96575E5824E3C3C2009B4FFF /* Login */,
 				96575E5524E3C35B009B4FFF /* Main */,
@@ -188,6 +212,7 @@
 				964101E424EF606200C691C0 /* DailyTableViewCell.swift */,
 				96EDFEA724F827C10000FFFB /* DailyDetailViewController.swift */,
 				96B9FCA025651585001C2A87 /* CalendarViewController.swift */,
+				068F0E60256D71560093C8BD /* ForgotPWViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -204,7 +229,6 @@
 		96575E5A24E3C3CF009B4FFF /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
-				96575E5C24E3C3E9009B4FFF /* Login.storyboard */,
 			);
 			path = StoryBoard;
 			sourceTree = "<group>";
@@ -277,7 +301,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96575E5D24E3C3E9009B4FFF /* Login.storyboard in Resources */,
 				96575E4B24E3C054009B4FFF /* LaunchScreen.storyboard in Resources */,
 				96EDFEAA24FBF1E30000FFFB /* GoogleService-Info.plist in Resources */,
 				96575E4824E3C054009B4FFF /* Assets.xcassets in Resources */,
@@ -339,6 +362,7 @@
 				96241E1C24E51E0D001B5948 /* RegisterViewController.swift in Sources */,
 				964101E524EF606200C691C0 /* DailyTableViewCell.swift in Sources */,
 				96575E6224E3C4D8009B4FFF /* LoginViewController.swift in Sources */,
+				068F0E61256D71560093C8BD /* ForgotPWViewController.swift in Sources */,
 				96575E4324E3C051009B4FFF /* ViewController.swift in Sources */,
 				96575E3F24E3C051009B4FFF /* AppDelegate.swift in Sources */,
 				96575E4124E3C051009B4FFF /* SceneDelegate.swift in Sources */,
