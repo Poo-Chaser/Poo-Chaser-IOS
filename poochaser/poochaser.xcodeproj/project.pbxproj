@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		068F0E2D256D66700093C8BD /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 068F0E2C256D66700093C8BD /* Register.storyboard */; };
 		5C5AB597FBB0DEA354C63C2B /* Pods_poochaser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C09E21F18239AA3B48755F /* Pods_poochaser.framework */; };
-		96241E1C24E51E0D001B5948 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96241E1B24E51E0D001B5948 /* RegisterController.swift */; };
+		96241E1C24E51E0D001B5948 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96241E1B24E51E0D001B5948 /* RegisterViewController.swift */; };
 		964101E324EED38100C691C0 /* DailyAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964101E224EED38100C691C0 /* DailyAddViewController.swift */; };
 		964101E524EF606200C691C0 /* DailyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964101E424EF606200C691C0 /* DailyTableViewCell.swift */; };
 		96575E3F24E3C051009B4FFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96575E3E24E3C051009B4FFF /* AppDelegate.swift */; };
@@ -26,9 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		068F0E2C256D66700093C8BD /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		23B3B21A0A05C50343CE155D /* Pods-poochaser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-poochaser.release.xcconfig"; path = "Target Support Files/Pods-poochaser/Pods-poochaser.release.xcconfig"; sourceTree = "<group>"; };
 		74C09E21F18239AA3B48755F /* Pods_poochaser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_poochaser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		96241E1B24E51E0D001B5948 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		96241E1B24E51E0D001B5948 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		964101E224EED38100C691C0 /* DailyAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyAddViewController.swift; sourceTree = "<group>"; };
 		964101E424EF606200C691C0 /* DailyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTableViewCell.swift; sourceTree = "<group>"; };
 		96575E3B24E3C051009B4FFF /* poochaser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poochaser.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +71,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		068F0E2A256D66570093C8BD /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				068F0E2C256D66700093C8BD /* Register.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
 		8FC9A83A35D9AA23095CC2EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -80,7 +90,7 @@
 		96241E1D24E53F1E001B5948 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				96241E1F24E53F31001B5948 /* StoryBoard */,
+				068F0E2A256D66570093C8BD /* StoryBoard */,
 				96241E1E24E53F29001B5948 /* ViewController */,
 			);
 			path = Register;
@@ -89,16 +99,9 @@
 		96241E1E24E53F29001B5948 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				96241E1B24E51E0D001B5948 /* RegisterController.swift */,
+				96241E1B24E51E0D001B5948 /* RegisterViewController.swift */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		96241E1F24E53F31001B5948 /* StoryBoard */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = StoryBoard;
 			sourceTree = "<group>";
 		};
 		96575E3224E3C051009B4FFF = {
@@ -279,6 +282,7 @@
 				96EDFEAA24FBF1E30000FFFB /* GoogleService-Info.plist in Resources */,
 				96575E4824E3C054009B4FFF /* Assets.xcassets in Resources */,
 				96575E4624E3C051009B4FFF /* Main.storyboard in Resources */,
+				068F0E2D256D66700093C8BD /* Register.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,7 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96B9FCA125651585001C2A87 /* CalendarViewController.swift in Sources */,
-				96241E1C24E51E0D001B5948 /* RegisterController.swift in Sources */,
+				96241E1C24E51E0D001B5948 /* RegisterViewController.swift in Sources */,
 				964101E524EF606200C691C0 /* DailyTableViewCell.swift in Sources */,
 				96575E6224E3C4D8009B4FFF /* LoginViewController.swift in Sources */,
 				96575E4324E3C051009B4FFF /* ViewController.swift in Sources */,

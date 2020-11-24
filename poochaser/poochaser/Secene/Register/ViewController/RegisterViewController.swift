@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 
-class RegisterController: UIViewController, UITextFieldDelegate {
+class RegisterViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var emailTextField: UITextField! {
         didSet {

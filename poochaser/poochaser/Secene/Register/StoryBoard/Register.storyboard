@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Register View Controller-->
+        <scene sceneID="mFc-zD-eQj">
+            <objects>
+                <viewController storyboardIdentifier="RegisterStoryboard" id="oVb-hs-0MG" customClass="RegisterViewController" customModule="poochaser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V8Z-Y9-rAm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="kUi-mP-bUg">
+                                <rect key="frame" x="20" y="64" width="374" height="488"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poo Chaser" translatesAutoresizingMaskIntoConstraints="NO" id="fbK-Ni-OsD">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="166.5"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oKO-EJ-hcQ" userLabel="Middle View">
+                                        <rect key="frame" x="0.0" y="216.5" width="374" height="173.5"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jMH-VN-wLI">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="45.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="패스워드" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Ls-3i-O5x">
+                                                <rect key="frame" x="0.0" y="65.5" width="374" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="패스워드 확인" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HPx-SH-xmS">
+                                                <rect key="frame" x="0.0" y="129.5" width="374" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="registerSegue" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RcZ-xE-SZO">
+                                        <rect key="frame" x="0.0" y="440" width="374" height="48"/>
+                                        <color key="backgroundColor" red="0.114701364" green="0.60800056410000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="OaB-xW-hfK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="회원가입">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="registerPressed:" destination="oVb-hs-0MG" eventType="touchUpInside" id="Ha2-em-VZL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uaL-sp-Z2e"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kUi-mP-bUg" firstAttribute="top" secondItem="uaL-sp-Z2e" secondAttribute="top" constant="20" id="Eiu-29-EAM"/>
+                            <constraint firstItem="kUi-mP-bUg" firstAttribute="leading" secondItem="uaL-sp-Z2e" secondAttribute="leading" constant="20" id="Mky-b3-Sgf"/>
+                            <constraint firstItem="uaL-sp-Z2e" firstAttribute="trailing" secondItem="kUi-mP-bUg" secondAttribute="trailing" constant="20" id="sDu-5C-ObS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="r5N-Z5-oee"/>
+                    <connections>
+                        <outlet property="checkPasswordTextField" destination="HPx-SH-xmS" id="u84-Gr-RWC"/>
+                        <outlet property="emailTextField" destination="jMH-VN-wLI" id="Oks-Wa-Yuu"/>
+                        <outlet property="passwordTextField" destination="6Ls-3i-O5x" id="Z2k-gm-6It"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OFW-0I-eEY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="872" y="-654"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Poo Chaser" width="166.5" height="166.5"/>
+    </resources>
+</document>

@@ -48,7 +48,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func RegisterBtn(_ sender: Any) {
-        print("To Register!")
+        
+        let sb = UIStoryboard(name: "Register", bundle: nil)
+        guard let vc = sb.instantiateViewController(withIdentifier: "RegisterStoryboard") as? RegisterViewController else {
+            fatalError()
+        }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {

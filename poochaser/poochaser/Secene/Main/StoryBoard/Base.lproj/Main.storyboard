@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nRr-go-BBO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0kB-eK-02F">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,26 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="kbg-Ky-6iN">
-            <objects>
-                <navigationController id="nRr-go-BBO" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5S4-tM-5G9">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Hef-8a-e2S"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v61-c4-IQ8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-913" y="78"/>
-        </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="Login" id="BYZ-38-t0r" customClass="LoginViewController" customModule="poochaser" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginStoryboard" id="BYZ-38-t0r" customClass="LoginViewController" customModule="poochaser" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,9 +62,6 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2KF-sA-VOp">
                                                         <rect key="frame" x="160.5" y="0.0" width="213.5" height="31"/>
                                                         <state key="normal" title="비밀번호를 잊으셨나요?"/>
-                                                        <connections>
-                                                            <segue destination="neP-T0-ZK2" kind="show" id="kIp-1n-crX"/>
-                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -98,7 +79,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="LoginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cix-mN-8HJ"/>
-                                                    <segue destination="1S2-MP-f9n" kind="show" identifier="LoginToMain" id="O70-aV-pU5"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9L8-i8-LEe">
@@ -116,7 +96,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="RegisterBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zd9-vE-Xzy"/>
-                                                    <segue destination="b6y-xI-NW9" kind="show" id="aV0-Ex-XMR"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -140,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="114" y="79"/>
+            <point key="canvasLocation" x="1023.1884057971015" y="78.348214285714278"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="yr6-qH-zhJ">
@@ -151,7 +130,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="mRA-ND-wh0">
-                                <rect key="frame" x="8" y="88" width="398" height="618"/>
+                                <rect key="frame" x="8" y="44" width="398" height="618"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poo Chaser" translatesAutoresizingMaskIntoConstraints="NO" id="1xI-gY-36H">
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="166.5"/>
@@ -210,27 +189,27 @@
             <objects>
                 <viewController storyboardIdentifier="MainReportVC" id="Urj-1h-F6Z" userLabel="Main" customClass="ViewController" customModule="poochaser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F3z-Qd-JhH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="wnE-U1-jiI">
-                                <rect key="frame" x="20" y="108" width="374" height="685"/>
+                                <rect key="frame" x="20" y="20" width="374" height="719"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="q4X-g5-X6G" userLabel="Top View">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="265"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="299"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QUa-U4-J4V" userLabel="restartBtn">
-                                                <rect key="frame" x="0.0" y="121.5" width="131.5" height="22"/>
+                                                <rect key="frame" x="0.0" y="138.5" width="131.5" height="22"/>
                                                 <state key="normal" title="Button" image="arrow.clockwise" catalog="system"/>
                                                 <connections>
                                                     <action selector="refreshBtn:" destination="Urj-1h-F6Z" eventType="touchUpInside" id="9dF-1c-rL2"/>
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="Poo Chaser" translatesAutoresizingMaskIntoConstraints="NO" id="Qw6-lx-F2s">
-                                                <rect key="frame" x="131.5" y="49.5" width="166.5" height="166.5"/>
+                                                <rect key="frame" x="131.5" y="66.5" width="166.5" height="166.5"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fft-9r-a51" userLabel="settingBtn">
-                                                <rect key="frame" x="298" y="121.5" width="76" height="22"/>
+                                                <rect key="frame" x="298" y="138.5" width="76" height="22"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <state key="normal" title="Button" image="gear" catalog="system"/>
                                                 <connections>
@@ -241,13 +220,13 @@
                                         <variation key="heightClass=regular" distribution="fill"/>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="viewTimeLabel" text="MM월 dd일" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHW-Ob-N7q">
-                                        <rect key="frame" x="0.0" y="305" width="374" height="42"/>
+                                        <rect key="frame" x="0.0" y="339" width="374" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="qCj-oX-53X">
-                                        <rect key="frame" x="0.0" y="387" width="374" height="298"/>
+                                        <rect key="frame" x="0.0" y="421" width="374" height="298"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6r-Ow-Ppo" userLabel="Add Button">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="19"/>
@@ -345,11 +324,11 @@
             <objects>
                 <viewController storyboardIdentifier="DailyAddViewController" title="Daily Add View Controller" id="1qY-Qj-M89" customClass="DailyAddViewController" customModule="poochaser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PD5-NZ-CsR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="hEk-ex-kNq">
-                                <rect key="frame" x="20" y="108" width="374" height="474"/>
+                                <rect key="frame" x="20" y="20" width="374" height="474"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poo Chaser" translatesAutoresizingMaskIntoConstraints="NO" id="6Kl-eW-UxX">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="166.5"/>
@@ -640,7 +619,7 @@
             <objects>
                 <viewController storyboardIdentifier="SettingViewController" id="rGl-Mq-YDB" customClass="SettingViewController" customModule="poochaser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="taP-f1-0OW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Poo Chaser" translatesAutoresizingMaskIntoConstraints="NO" id="M56-Xu-S6K">
@@ -674,14 +653,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Js1-Il-KSn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5809" y="72"/>
+            <point key="canvasLocation" x="6718.840579710145" y="71.651785714285708"/>
         </scene>
         <!--Report-->
         <scene sceneID="Hfk-nn-IDM">
             <objects>
                 <viewController id="5Aq-Js-hLB" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sqr-W5-E7S">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="test 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JkQ-hr-Bwz">
@@ -706,23 +685,13 @@
             <objects>
                 <viewController storyboardIdentifier="Calendar" id="nWU-pm-VH8" userLabel="Calendar" customClass="CalendarViewController" customModule="poochaser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x7G-zr-YfP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="nTl-fV-Oif" customClass="FSCalendar">
-                                <rect key="frame" x="20" y="79" width="374" height="374"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="WnR-wD-mJ1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Calendar" image="calendar" catalog="system" selectedImage="calendar" id="Xo0-gi-ENM"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="calendar" destination="nTl-fV-Oif" id="5OF-7z-8U4"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CSB-pq-tGu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -746,83 +715,30 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cng-hH-Kqt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5012" y="72"/>
+            <point key="canvasLocation" x="5921.739130434783" y="71.651785714285708"/>
         </scene>
-        <!--Register Controller-->
-        <scene sceneID="bHi-zU-Ifb">
+        <!--Navigation Controller-->
+        <scene sceneID="ocg-n1-Db2">
             <objects>
-                <viewController storyboardIdentifier="Register" id="b6y-xI-NW9" customClass="RegisterController" customModule="poochaser" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="h4B-SK-6ik">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="iQu-iD-NHL">
-                                <rect key="frame" x="20" y="108" width="374" height="488"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poo Chaser" translatesAutoresizingMaskIntoConstraints="NO" id="hLl-F0-ETs">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="166.5"/>
-                                    </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="CJe-Lw-WZU" userLabel="Middle View">
-                                        <rect key="frame" x="0.0" y="216.5" width="374" height="173.5"/>
-                                        <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aBz-hT-IIu">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="45.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="패스워드" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jfl-gn-SZc">
-                                                <rect key="frame" x="0.0" y="65.5" width="374" height="44"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="패스워드 확인" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6G0-PE-6Yn">
-                                                <rect key="frame" x="0.0" y="129.5" width="374" height="44"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="registerSegue" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8F-nq-EyT">
-                                        <rect key="frame" x="0.0" y="440" width="374" height="48"/>
-                                        <color key="backgroundColor" red="0.114701364" green="0.60800056410000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="30b-m0-g85"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="회원가입">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="registerPressed:" destination="b6y-xI-NW9" eventType="touchUpInside" id="a3C-Sj-CPp"/>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="Login" id="ouV-NC-L6M"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="1Dg-JZ-P2u"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="iQu-iD-NHL" firstAttribute="top" secondItem="1Dg-JZ-P2u" secondAttribute="top" constant="20" id="JeZ-7M-D8b"/>
-                            <constraint firstItem="iQu-iD-NHL" firstAttribute="leading" secondItem="1Dg-JZ-P2u" secondAttribute="leading" constant="20" id="KZk-rg-Rz9"/>
-                            <constraint firstItem="1Dg-JZ-P2u" firstAttribute="trailing" secondItem="iQu-iD-NHL" secondAttribute="trailing" constant="20" id="rLL-E8-xmj"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="D6U-9U-t4F"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0kB-eK-02F" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="PuH-PY-h2v"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Oka-MI-HcQ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
                     <connections>
-                        <outlet property="checkPasswordTextField" destination="6G0-PE-6Yn" id="x23-N4-A8O"/>
-                        <outlet property="emailTextField" destination="aBz-hT-IIu" id="1OF-dM-iHg"/>
-                        <outlet property="passwordTextField" destination="jfl-gn-SZc" id="GPC-1v-DLy"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="UoC-8o-NBs"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ySo-ae-iTT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V2J-PM-QBi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="872" y="-654"/>
+            <point key="canvasLocation" x="113" y="72"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="O70-aV-pU5"/>
-        <segue reference="Hef-8a-e2S"/>
+        <segue reference="ObI-aS-cHb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Poo Chaser" width="166.5" height="166.5"/>

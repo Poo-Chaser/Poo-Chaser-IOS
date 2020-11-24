@@ -23,14 +23,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        print("hi")
-        sleep(2)
+        
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        let firstViewController = LoginViewController()
+//        let navigationController = UINavigationController(rootViewController: firstViewController)
+//        navigationController.navigationItem.title = "Poo Chaser"
+//        window?.rootViewController = navigationController
+        
+//        let storyboard = UIStoryboard(name: "LoginStoryboard", bundle: nil)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
+//        let nvc = UINavigationController(rootViewController: vc)
+//
+//        self.window?.rootViewController = nvc
+//        window?.makeKeyAndVisible()
         
         FirebaseApp.configure()
-        
         let db = Firestore.firestore()
-        // [END default_firestore]
-        
         print(db)
         
         return true
