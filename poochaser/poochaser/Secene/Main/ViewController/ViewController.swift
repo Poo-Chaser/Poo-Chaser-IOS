@@ -207,7 +207,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // MARK: - TableView 속성
     func numberOfSections(in tableView: UITableView) -> Int {
-        return reportList.count
+        return reportList.count - 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
