@@ -12,6 +12,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="LoginStoryboard" id="BYZ-38-t0r" customClass="LoginViewController" customModule="poochaser" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -62,6 +63,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2KF-sA-VOp">
                                                         <rect key="frame" x="160.5" y="0.0" width="213.5" height="31"/>
                                                         <state key="normal" title="비밀번호를 잊으셨나요?"/>
+                                                        <connections>
+                                                            <action selector="ForgotPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="61J-ZH-gBo"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -117,14 +121,13 @@
                         <outlet property="passwordTextField" destination="jQv-yQ-1Wv" id="ypT-1Y-a4C"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1023.1884057971015" y="78.348214285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--ForgotPW View Controller-->
         <scene sceneID="yr6-qH-zhJ">
             <objects>
-                <viewController id="neP-T0-ZK2" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ForgotPW" id="neP-T0-ZK2" customClass="ForgotPWViewController" customModule="poochaser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PFl-0q-eUP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -182,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8wf-6u-4bn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="114" y="828"/>
+            <point key="canvasLocation" x="1023" y="828"/>
         </scene>
         <!--Main-->
         <scene sceneID="ZyE-Nk-Dzq">
@@ -720,6 +723,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ocg-n1-Db2">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V2J-PM-QBi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0kB-eK-02F" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="PuH-PY-h2v"/>
@@ -732,9 +736,8 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="UoC-8o-NBs"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="V2J-PM-QBi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="113" y="72"/>
+            <point key="canvasLocation" x="113" y="78"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
