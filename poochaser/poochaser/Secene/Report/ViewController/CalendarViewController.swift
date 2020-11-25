@@ -10,7 +10,8 @@ import UIKit
 import FSCalendar
 
 class CalendarViewController: ViewController, FSCalendarDelegate, FSCalendarDataSource {
-    @IBOutlet weak var calendar: FSCalendar!
+    
+    @IBOutlet var calendar: FSCalendar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +19,7 @@ class CalendarViewController: ViewController, FSCalendarDelegate, FSCalendarData
         calendar.delegate = self
         calendar.dataSource = self
         
-        view.addSubview(calendar)
+//        view.addSubview(calendar)
         
         calendar.appearance.weekdayTextColor = UIColor.black
         calendar.appearance.headerTitleColor = UIColor.red
@@ -26,7 +27,7 @@ class CalendarViewController: ViewController, FSCalendarDelegate, FSCalendarData
         calendar.appearance.selectionColor = UIColor.blue
         calendar.appearance.todayColor = UIColor.orange
         calendar.appearance.todaySelectionColor = UIColor.black
-        
+
         calendar.headerHeight = 50
         calendar.appearance.headerMinimumDissolvedAlpha = 0.0
         calendar.appearance.headerDateFormat = "YYYY년 M월"

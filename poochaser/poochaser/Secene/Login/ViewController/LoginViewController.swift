@@ -35,7 +35,26 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 if let e = error {
                     print(e)
                 } else {
-                    self!.performSegue(withIdentifier: "LoginToMain", sender: self)
+                    
+                    let firstSB = UIStoryboard(name: "Report", bundle: nil)
+                    
+                    guard let first = firstSB.instantiateViewController(withIdentifier: "MainReportVC") as? ViewController else { return }
+                    guard let second = firstSB.instantiateViewController(withIdentifier: "CalendarVC") as? CalendarViewController else { return }
+                    guard let thrid = firstSB.instantiateViewController(withIdentifier: "ReportVC") as? ReportViewController else { return }
+                    
+                    let tabs = NSArray(objects: first, second, thrid)
+                    
+                    let tb = UITabBarController()
+                    tb.modalPresentationStyle = .fullScreen
+                    tb.setViewControllers(tabs as? [UIViewController], animated: true)
+                    
+                    self?.present(tb, animated: true, completion: nil)
+//                    self?.tabBarController?.present(tb, animated: true, completion: nil)
+//                    let sb = UIStoryboard(name: "Report", bundle: nil)
+//                    guard let vc = sb.instantiateViewController(withIdentifier: "MainReportVC") as? ViewController else {
+//                        fatalError()
+//                    }
+//                    self?.navigationController?.pushViewController(vc, animated: true)
                 }
             }
         }
