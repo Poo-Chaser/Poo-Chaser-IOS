@@ -24,9 +24,12 @@ class DailyDetailViewController: ViewController {
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
     
-    @IBAction func deleteButton(_ sender: UIButton) {
+    @IBAction func deleteButton(_ sender: Any) {
         checkDB()
+        
+        self.dismiss(animated: true, completion: nil)
     }
+    
     
     var detailTime: String = ""
     var detailKind: String = ""
@@ -132,7 +135,7 @@ class DailyDetailViewController: ViewController {
             if let err = err {
                 print("Error removing document: \(err)")
             } else {
-                print("Document successfully removed!")
+                print("Document successfully removed!!!")
             }
         }
     }

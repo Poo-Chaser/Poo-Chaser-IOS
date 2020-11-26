@@ -44,7 +44,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let cellSpacingHeight: CGFloat = 10
     
     @IBAction func refreshBtn(_ sender: UIButton) {
-//        DailyTableView.reloadData()
+        if DailyTableView != nil {
+            DailyTableView.reloadData()
+        }
+        
         print("refresh")
     }
     @IBOutlet weak var refreshBtn: UIButton!
@@ -95,6 +98,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     }
                 }
             }
+        }
+        
+        if DailyTableView != nil {
+            DailyTableView.reloadData()
         }
     }
     
@@ -210,8 +217,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         
         
-        
-        DailyTableView?.reloadData()
+
+//        DailyTableView?.reloadData()
         
     }
     
@@ -274,6 +281,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         rvc.detailKind = self.reportList[indexPath.section].kind
         rvc.detailColor = self.reportList[indexPath.section].color
         
-        self.show(rvc, sender: true)
+        rvc.modalPresentationStyle = .fullScreen
+        self.present(rvc, animated: true, completion: nil)
     }
 }

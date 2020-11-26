@@ -130,7 +130,7 @@
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" selectedImage="house.fill" id="lOo-Dv-VTg"/>
                     <navigationItem key="navigationItem" id="UIQ-dI-RqT"/>
                     <connections>
-                        <outlet property="AddButton" destination="EPW-pS-UCa" id="kno-Ay-pDO"/>
+                        <outlet property="AddButton" destination="EPW-pS-UCa" id="Bg7-cT-8dv"/>
                         <outlet property="DailyTableView" destination="JJM-w8-iJc" id="Tkc-c7-bpT"/>
                         <outlet property="refreshBtn" destination="WaF-33-ymR" id="d2Y-CR-76k"/>
                         <outlet property="settingBtn" destination="1o2-gk-qfv" id="PlY-rH-Dip"/>
@@ -399,7 +399,7 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="addButton:" destination="avy-cM-N61" eventType="touchUpInside" id="YOS-PQ-Txi"/>
-                                                            <action selector="deleteButton:" destination="BwG-kQ-Meb" eventType="touchUpInside" id="PTI-KK-oO8"/>
+                                                            <action selector="deleteButton:" destination="BwG-kQ-Meb" eventType="touchUpInside" id="idM-fQ-Qqk"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
