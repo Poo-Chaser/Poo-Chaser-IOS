@@ -51,7 +51,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var settingBtn: UIButton!
     
     @IBOutlet weak var viewTimeLabel: UILabel!
+    
     @IBOutlet weak var AddButton: UIButton!
+    @IBAction func ReportAddButton(_ sender: Any) {
+        
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "DailyAddViewController") as? DailyAddViewController else {
+            fatalError("Error Add Button")
+        }
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+    }
+    
     
     @IBOutlet weak var DailyTableView: UITableView!
     
@@ -207,7 +217,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // MARK: - TableView 속성
     func numberOfSections(in tableView: UITableView) -> Int {
-        return reportList.count - 1
+        return reportList.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

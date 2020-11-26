@@ -50,11 +50,14 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="w8f-lC-1r4">
                                         <rect key="frame" x="0.0" y="480" width="374" height="298"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPW-pS-UCa" userLabel="Add Button">
+                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="ReportAddButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPW-pS-UCa" userLabel="Report Add Button">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="19"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="1"/>
                                                 <size key="titleShadowOffset" width="0.0" height="-1"/>
                                                 <state key="normal" title="Button" image="plus.circle" catalog="system"/>
+                                                <connections>
+                                                    <action selector="ReportAddButton:" destination="lQm-Ne-7FP" eventType="touchUpInside" id="3od-6Y-qUI"/>
+                                                </connections>
                                             </button>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JJM-w8-iJc">
                                                 <rect key="frame" x="0.0" y="22" width="374" height="276"/>
@@ -127,7 +130,7 @@
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" selectedImage="house.fill" id="lOo-Dv-VTg"/>
                     <navigationItem key="navigationItem" id="UIQ-dI-RqT"/>
                     <connections>
-                        <outlet property="AddButton" destination="EPW-pS-UCa" id="Bg7-cT-8dv"/>
+                        <outlet property="AddButton" destination="EPW-pS-UCa" id="kno-Ay-pDO"/>
                         <outlet property="DailyTableView" destination="JJM-w8-iJc" id="Tkc-c7-bpT"/>
                         <outlet property="refreshBtn" destination="WaF-33-ymR" id="d2Y-CR-76k"/>
                         <outlet property="settingBtn" destination="1o2-gk-qfv" id="PlY-rH-Dip"/>
