@@ -27,7 +27,7 @@ class DailyDetailViewController: ViewController {
     @IBAction func deleteButton(_ sender: Any) {
         checkDB()
         
-        self.dismiss(animated: true, completion: nil)
+        self.presentingViewController?.dismiss(animated: true)
     }
     
     

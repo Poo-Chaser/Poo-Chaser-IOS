@@ -73,6 +73,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
         
+        DailyTableView?.delegate = self
+        DailyTableView?.dataSource = self
+        
         let ad = UIApplication.shared.delegate as? AppDelegate
         
         if let time = ad?.paramTime {

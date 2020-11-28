@@ -13,26 +13,27 @@ class CalendarViewController: ViewController, FSCalendarDelegate, FSCalendarData
     
     @IBOutlet var calendar: FSCalendar!
     
+    let dateFormatter = DateFormatter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         
         calendar.delegate = self
         calendar.dataSource = self
         
-//        view.addSubview(calendar)
+        // 캘린더 및 선택 색상
+        calendar.backgroundColor = UIColor(red: 241/255, green: 249/255, blue: 255/255, alpha: 1)
+        calendar.appearance.selectionColor = UIColor(red: 38/255, green: 153/255, blue: 251/255, alpha: 1)
+        calendar.appearance.todayColor = UIColor(red: 188/255, green: 224/255, blue: 253/255, alpha: 1)
         
-        calendar.appearance.weekdayTextColor = UIColor.black
-        calendar.appearance.headerTitleColor = UIColor.red
-        calendar.appearance.eventDefaultColor = UIColor.green
-        calendar.appearance.selectionColor = UIColor.blue
-        calendar.appearance.todayColor = UIColor.orange
-        calendar.appearance.todaySelectionColor = UIColor.black
-
+        // 캘린더 크기 및 속성
         calendar.headerHeight = 50
         calendar.appearance.headerMinimumDissolvedAlpha = 0.0
-        calendar.appearance.headerDateFormat = "YYYY년 M월"
-        calendar.appearance.headerTitleColor = .black
+        calendar.appearance.headerDateFormat = "YYYY년 M월"   // 캘린더 표시 속성
         calendar.appearance.headerTitleFont = UIFont.systemFont(ofSize: 24)
+        calendar.appearance.borderRadius = 0
 
         calendar.locale = Locale(identifier: "ko_KR")
 
@@ -46,4 +47,32 @@ class CalendarViewController: ViewController, FSCalendarDelegate, FSCalendarData
 
     }
 }
+
+extension CalendarViewController {
+
+    // 날짜 선택 시 콜백 메소드
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        print(dateFormatter.string(from: date) + " 선택됨")
+    }
+    
+    // 날짜 선택 해제 시 콜백 메소드
+    public func calendar(_ calendar: FSCalendar, didDeselect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        print(dateFormatter.string(from: date) + " 해제됨")
+    }
+    
+    func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
+        switch dateFormatter.string(from: date) {
+        case dateFormatter.string(from: Date()):
+            return 1
+        case "2020-11-26":
+            return 2
+        case "2020-11-25":
+            return 3
+        default:
+            return 0
+        }
+    }
+}
+
+
 
