@@ -8,12 +8,23 @@
 
 import UIKit
 import FSCalendar
+import FirebaseAuth
+import FirebaseCore
+import FirebaseFirestore
 
 class CalendarViewController: ViewController, FSCalendarDelegate, FSCalendarDataSource {
     
     @IBOutlet var calendar: FSCalendar!
+    @IBOutlet weak var DayTableView: UITableView!
+    let arr = ["A", "B", "C", "D", "E", "F"]
+    
+    //    @IBOutlet weak var DayTimeLabel: UILabel!
+//    @IBOutlet weak var DayKindsLabel: UILabel!
+//    @IBOutlet weak var DayColorLabel: UILabel!
+    
     
     let dateFormatter = DateFormatter()
+    var calendarDB = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +33,12 @@ class CalendarViewController: ViewController, FSCalendarDelegate, FSCalendarData
         
         calendar.delegate = self
         calendar.dataSource = self
+        
+        DayTableView?.separatorStyle = UITableViewCell.SeparatorStyle.none
+        self.DayTableView?.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
+        DayTableView?.delegate = self
+        DayTableView?.dataSource = self
+        DayTableView?.estimatedRowHeight = 30
         
         // 캘린더 및 선택 색상
         calendar.backgroundColor = UIColor(red: 241/255, green: 249/255, blue: 255/255, alpha: 1)
@@ -44,9 +61,11 @@ class CalendarViewController: ViewController, FSCalendarDelegate, FSCalendarData
         calendar.calendarWeekdayView.weekdayLabels[4].text = "목"
         calendar.calendarWeekdayView.weekdayLabels[5].text = "금"
         calendar.calendarWeekdayView.weekdayLabels[6].text = "토"
-
     }
 }
+
+
+// MARK:- FSCalendar View
 
 extension CalendarViewController {
 
@@ -75,4 +94,52 @@ extension CalendarViewController {
 }
 
 
+extension CalendarViewController {
+    // MARK:- TableView
 
+    func DaynumberOfSections(in tableView: UITableView) -> Int {
+        return 0
+    }
+
+     func DaytableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arr.count
+    }
+    
+//     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return cellSpacingHeight
+//    }
+    
+     func DaytableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.clear
+        return headerView
+    }
+    
+     func DaytableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = DayTableView.dequeueReusableCell(withIdentifier: "DayTableViewCell") as! DayTableViewCell
+        
+//        cell.DayTimeLabel.text = arr[indexPath.row]
+//        cell.DayKindsLabel.text = arr[indexPath.row]
+//        cell.DayColorLabel.text = arr[indexPath.row]
+        
+        cell.DayTimeLabel.text = "HH:MM"
+        cell.DayKindsLabel.text = "제 n형"
+        cell.DayColorLabel.text = "갈색"
+        
+        // add border and color
+        cell.backgroundColor = UIColor.white
+        cell.layer.borderColor = UIColor.black.cgColor
+        cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 10
+        cell.clipsToBounds = true
+        
+        cell.layer.shadowColor = UIColor.gray.cgColor
+        cell.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        cell.layer.shadowOpacity = 1.0
+        cell.layer.shadowRadius = 0.0
+        cell.layer.masksToBounds = false
+        
+        
+        return cell
+    }
+}

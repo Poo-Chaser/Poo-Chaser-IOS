@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0608ADEF2572684D000DEAC3 /* DayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0608ADEE2572684D000DEAC3 /* DayTableViewCell.swift */; };
 		068F0E2D256D66700093C8BD /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 068F0E2C256D66700093C8BD /* Register.storyboard */; };
 		068F0E61256D71560093C8BD /* ForgotPWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068F0E60256D71560093C8BD /* ForgotPWViewController.swift */; };
 		068F0EB3256E74080093C8BD /* Report.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 068F0EB2256E74080093C8BD /* Report.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0608ADEE2572684D000DEAC3 /* DayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTableViewCell.swift; sourceTree = "<group>"; };
 		068F0E2C256D66700093C8BD /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		068F0E60256D71560093C8BD /* ForgotPWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPWViewController.swift; sourceTree = "<group>"; };
 		068F0EB2256E74080093C8BD /* Report.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Report.storyboard; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				96EDFEA724F827C10000FFFB /* DailyDetailViewController.swift */,
 				96B9FCA025651585001C2A87 /* CalendarViewController.swift */,
 				068F0EBC256E88E50093C8BD /* ReportViewController.swift */,
+				0608ADEE2572684D000DEAC3 /* DayTableViewCell.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				96575E4324E3C051009B4FFF /* ViewController.swift in Sources */,
 				96575E3F24E3C051009B4FFF /* AppDelegate.swift in Sources */,
 				96575E4124E3C051009B4FFF /* SceneDelegate.swift in Sources */,
+				0608ADEF2572684D000DEAC3 /* DayTableViewCell.swift in Sources */,
 				964101E324EED38100C691C0 /* DailyAddViewController.swift in Sources */,
 				96D5443024E6B13100C653C1 /* SettingViewController.swift in Sources */,
 				96EDFEA824F827C10000FFFB /* DailyDetailViewController.swift in Sources */,
