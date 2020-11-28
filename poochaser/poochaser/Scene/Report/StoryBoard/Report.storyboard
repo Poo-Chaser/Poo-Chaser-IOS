@@ -504,22 +504,34 @@
         <scene sceneID="xz2-73-Ugc">
             <objects>
                 <viewController storyboardIdentifier="CalendarVC" id="kCB-B8-oFv" userLabel="Calendar" customClass="CalendarViewController" customModule="poochaser" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" restorationIdentifier="calendar" id="09E-3i-UW8" customClass="FSCalendar">
+                    <view key="view" contentMode="scaleToFill" id="n3V-ZN-wCG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <viewLayoutGuide key="safeArea" id="z1G-M0-5Oo"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" restorationIdentifier="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="KX7-7o-KQU" customClass="FSCalendar">
+                                <rect key="frame" x="20" y="64" width="374" height="318"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xMw-ba-01h"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KX7-7o-KQU" firstAttribute="leading" secondItem="xMw-ba-01h" secondAttribute="leading" constant="20" id="S3u-mi-8ab"/>
+                            <constraint firstItem="xMw-ba-01h" firstAttribute="bottom" secondItem="KX7-7o-KQU" secondAttribute="bottom" constant="431" id="Yuq-Tj-xQv"/>
+                            <constraint firstItem="KX7-7o-KQU" firstAttribute="top" secondItem="xMw-ba-01h" secondAttribute="top" constant="20" id="bhF-AX-TH3"/>
+                            <constraint firstItem="xMw-ba-01h" firstAttribute="trailing" secondItem="KX7-7o-KQU" secondAttribute="trailing" constant="20" id="na2-d3-pnP"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Calendar" image="calendar" catalog="system" selectedImage="calendar" id="qib-D0-1sQ"/>
                     <navigationItem key="navigationItem" id="XWn-hC-wLJ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="calendar" destination="09E-3i-UW8" id="iCX-jH-rPe"/>
+                        <outlet property="calendar" destination="KX7-7o-KQU" id="3On-ba-hSq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OWm-am-vfP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5416" y="-858"/>
+            <point key="canvasLocation" x="5415.9420289855079" y="-858.48214285714278"/>
         </scene>
     </scenes>
     <resources>
