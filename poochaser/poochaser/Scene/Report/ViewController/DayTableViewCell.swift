@@ -2,7 +2,7 @@
 //  DayTableViewCell.swift
 //  poochaser
 //
-//  Created by 전판근 on 2020/11/28.
+//  Created by 전판근 on 2020/11/29.
 //  Copyright © 2020 Jeonpangeun. All rights reserved.
 //
 

@@ -508,24 +508,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" restorationIdentifier="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="KX7-7o-KQU" customClass="FSCalendar">
-                                <rect key="frame" x="20" y="64" width="374" height="318"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vey-rq-cI7">
+                                <rect key="frame" x="20" y="64" width="374" height="749"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" restorationIdentifier="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="KX7-7o-KQU" customClass="FSCalendar">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="325"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="325" id="mEd-HV-Mzo"/>
+                                        </constraints>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Ea-hG-PwE">
+                                        <rect key="frame" x="0.0" y="345" width="374" height="404"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Day List Cell" id="19Z-cq-Emj" customClass="DayTableViewCell" customModule="poochaser" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="374" height="43"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="19Z-cq-Emj" id="jVU-0R-nLO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HH:mm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFv-LE-Ndb" userLabel="Day Time Label">
+                                                            <rect key="frame" x="20" y="11" width="58" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="배변 종류" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6A-H3-gNy" userLabel="Day Kinds Label">
+                                                            <rect key="frame" x="155.5" y="11" width="63.5" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="배변 색" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L79-ek-gQB" userLabel="Day Color Label">
+                                                            <rect key="frame" x="305.5" y="11" width="48.5" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="yFv-LE-Ndb" firstAttribute="leading" secondItem="jVU-0R-nLO" secondAttribute="leadingMargin" id="9ob-bn-OqG"/>
+                                                        <constraint firstItem="L79-ek-gQB" firstAttribute="trailing" secondItem="jVU-0R-nLO" secondAttribute="trailingMargin" id="PZI-Ee-mae"/>
+                                                        <constraint firstItem="S6A-H3-gNy" firstAttribute="bottom" secondItem="jVU-0R-nLO" secondAttribute="bottomMargin" id="UfZ-01-WQn"/>
+                                                        <constraint firstItem="S6A-H3-gNy" firstAttribute="top" secondItem="jVU-0R-nLO" secondAttribute="topMargin" id="cXD-IV-hbe"/>
+                                                        <constraint firstItem="L79-ek-gQB" firstAttribute="top" secondItem="jVU-0R-nLO" secondAttribute="topMargin" id="kVn-vg-9AV"/>
+                                                        <constraint firstItem="S6A-H3-gNy" firstAttribute="centerX" secondItem="jVU-0R-nLO" secondAttribute="centerX" id="pX5-4p-RfM"/>
+                                                        <constraint firstItem="L79-ek-gQB" firstAttribute="bottom" secondItem="jVU-0R-nLO" secondAttribute="bottomMargin" id="rsr-iJ-PxM"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="yFv-LE-Ndb" secondAttribute="bottom" id="yQF-rt-UQV"/>
+                                                        <constraint firstItem="yFv-LE-Ndb" firstAttribute="top" secondItem="jVU-0R-nLO" secondAttribute="topMargin" id="zVp-qG-LSF"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="DayColorLabel" destination="L79-ek-gQB" id="rtQ-uT-6Qq"/>
+                                                    <outlet property="DayKindsLabel" destination="S6A-H3-gNy" id="uuB-jo-Gw6"/>
+                                                    <outlet property="DayTimeLabel" destination="yFv-LE-Ndb" id="UoD-bq-OlH"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xMw-ba-01h"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="KX7-7o-KQU" firstAttribute="leading" secondItem="xMw-ba-01h" secondAttribute="leading" constant="20" id="S3u-mi-8ab"/>
-                            <constraint firstItem="xMw-ba-01h" firstAttribute="bottom" secondItem="KX7-7o-KQU" secondAttribute="bottom" constant="431" id="Yuq-Tj-xQv"/>
-                            <constraint firstItem="KX7-7o-KQU" firstAttribute="top" secondItem="xMw-ba-01h" secondAttribute="top" constant="20" id="bhF-AX-TH3"/>
-                            <constraint firstItem="xMw-ba-01h" firstAttribute="trailing" secondItem="KX7-7o-KQU" secondAttribute="trailing" constant="20" id="na2-d3-pnP"/>
+                            <constraint firstAttribute="trailing" secondItem="vey-rq-cI7" secondAttribute="trailing" constant="20" id="Fo2-Gw-0FU"/>
+                            <constraint firstItem="vey-rq-cI7" firstAttribute="bottom" secondItem="xMw-ba-01h" secondAttribute="bottom" id="Vvg-aD-ASa"/>
+                            <constraint firstItem="vey-rq-cI7" firstAttribute="leading" secondItem="xMw-ba-01h" secondAttribute="leading" constant="20" id="t0P-xb-kUq"/>
+                            <constraint firstItem="vey-rq-cI7" firstAttribute="top" secondItem="xMw-ba-01h" secondAttribute="top" constant="20" id="x0C-LJ-Eq9"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Calendar" image="calendar" catalog="system" selectedImage="calendar" id="qib-D0-1sQ"/>
                     <navigationItem key="navigationItem" id="XWn-hC-wLJ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="DayTableView" destination="0Ea-hG-PwE" id="SFs-eF-IR7"/>
                         <outlet property="calendar" destination="KX7-7o-KQU" id="3On-ba-hSq"/>
                     </connections>
                 </viewController>
