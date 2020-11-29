@@ -512,71 +512,13 @@
                                 <rect key="frame" x="20" y="64" width="374" height="318"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="DayTableView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sj1-WY-kBa">
-                                <rect key="frame" x="20" y="390" width="374" height="423"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="DayTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Day List Cell" rowHeight="60" id="cu9-Qf-9pm" userLabel="Day List Cell" customClass="DayTableViewCell" customModule="poochaser" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="60"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="DayListCell" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cu9-Qf-9pm" id="HBC-QB-1Zu">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="DayTimeLabel" text="HH:mm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQY-RY-Xbx">
-                                                    <rect key="frame" x="20" y="20" width="58" height="20"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="ColorLabel" text="배변 색" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9H8-85-jId">
-                                                    <rect key="frame" x="304" y="20" width="50" height="20"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="DayKindsLabel" text="배변 종류" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ihq-iG-vEe">
-                                                    <rect key="frame" x="155.5" y="20" width="63.5" height="20"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Ihq-iG-vEe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dQY-RY-Xbx" secondAttribute="trailing" constant="8" symbolic="YES" id="0bx-HO-v2I"/>
-                                                <constraint firstItem="dQY-RY-Xbx" firstAttribute="top" secondItem="HBC-QB-1Zu" secondAttribute="topMargin" constant="9" id="3Rj-Ty-KyK"/>
-                                                <constraint firstItem="Ihq-iG-vEe" firstAttribute="top" secondItem="HBC-QB-1Zu" secondAttribute="topMargin" constant="9" id="5fj-tV-otY"/>
-                                                <constraint firstItem="Ihq-iG-vEe" firstAttribute="top" secondItem="HBC-QB-1Zu" secondAttribute="topMargin" constant="9" id="GXc-Ru-HWV"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Ihq-iG-vEe" secondAttribute="bottom" constant="9" id="Hct-RO-DVq"/>
-                                                <constraint firstItem="dQY-RY-Xbx" firstAttribute="leading" secondItem="HBC-QB-1Zu" secondAttribute="leadingMargin" id="Jzm-an-fKZ"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="dQY-RY-Xbx" secondAttribute="bottom" constant="9" id="OAr-wV-0WK"/>
-                                                <constraint firstItem="Ihq-iG-vEe" firstAttribute="centerX" secondItem="HBC-QB-1Zu" secondAttribute="centerX" id="Trg-yE-PgY"/>
-                                                <constraint firstItem="9H8-85-jId" firstAttribute="top" secondItem="HBC-QB-1Zu" secondAttribute="topMargin" constant="9" id="Xv0-Ew-KBl"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="9H8-85-jId" secondAttribute="bottom" constant="9" id="aJQ-mr-LTy"/>
-                                                <constraint firstItem="9H8-85-jId" firstAttribute="leading" secondItem="Ihq-iG-vEe" secondAttribute="trailing" constant="85" id="bVY-Yj-95m"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Ihq-iG-vEe" secondAttribute="bottom" constant="9" id="hzO-9k-41I"/>
-                                                <constraint firstItem="9H8-85-jId" firstAttribute="trailing" secondItem="HBC-QB-1Zu" secondAttribute="trailingMargin" id="rc2-3r-cb0"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="DayColorLabel" destination="9H8-85-jId" id="iVS-dE-dzn"/>
-                                            <outlet property="DayKindsLabel" destination="Ihq-iG-vEe" id="p3c-fY-GZ0"/>
-                                            <outlet property="DayTimeLabel" destination="dQY-RY-Xbx" id="1Q8-1G-CnG"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xMw-ba-01h"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Sj1-WY-kBa" firstAttribute="bottom" secondItem="xMw-ba-01h" secondAttribute="bottom" id="35v-ry-fjh"/>
-                            <constraint firstItem="Sj1-WY-kBa" firstAttribute="leading" secondItem="xMw-ba-01h" secondAttribute="leading" constant="20" id="AHb-mo-Qnh"/>
-                            <constraint firstItem="xMw-ba-01h" firstAttribute="trailing" secondItem="Sj1-WY-kBa" secondAttribute="trailing" constant="20" id="Kpv-Fe-Gb8"/>
                             <constraint firstItem="KX7-7o-KQU" firstAttribute="leading" secondItem="xMw-ba-01h" secondAttribute="leading" constant="20" id="S3u-mi-8ab"/>
                             <constraint firstItem="xMw-ba-01h" firstAttribute="bottom" secondItem="KX7-7o-KQU" secondAttribute="bottom" constant="431" id="Yuq-Tj-xQv"/>
                             <constraint firstItem="KX7-7o-KQU" firstAttribute="top" secondItem="xMw-ba-01h" secondAttribute="top" constant="20" id="bhF-AX-TH3"/>
-                            <constraint firstItem="Sj1-WY-kBa" firstAttribute="top" secondItem="KX7-7o-KQU" secondAttribute="bottom" constant="8" symbolic="YES" id="lnC-jo-QgB"/>
                             <constraint firstItem="xMw-ba-01h" firstAttribute="trailing" secondItem="KX7-7o-KQU" secondAttribute="trailing" constant="20" id="na2-d3-pnP"/>
                         </constraints>
                     </view>
@@ -584,7 +526,6 @@
                     <navigationItem key="navigationItem" id="XWn-hC-wLJ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="DayTableView" destination="Sj1-WY-kBa" id="YJJ-6Q-HZP"/>
                         <outlet property="calendar" destination="KX7-7o-KQU" id="3On-ba-hSq"/>
                     </connections>
                 </viewController>
