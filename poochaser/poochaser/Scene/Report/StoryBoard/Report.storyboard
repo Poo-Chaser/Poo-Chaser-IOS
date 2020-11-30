@@ -37,6 +37,9 @@
                                                 <rect key="frame" x="298" y="168" width="76" height="22"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <state key="normal" title="Button" image="gear" catalog="system"/>
+                                                <connections>
+                                                    <action selector="SettingBtn:" destination="lQm-Ne-7FP" eventType="touchUpInside" id="dQV-4H-MlT"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <variation key="heightClass=regular" distribution="fill"/>
@@ -133,7 +136,7 @@
                         <outlet property="AddButton" destination="EPW-pS-UCa" id="Bg7-cT-8dv"/>
                         <outlet property="DailyTableView" destination="JJM-w8-iJc" id="Tkc-c7-bpT"/>
                         <outlet property="refreshBtn" destination="WaF-33-ymR" id="d2Y-CR-76k"/>
-                        <outlet property="settingBtn" destination="1o2-gk-qfv" id="PlY-rH-Dip"/>
+                        <outlet property="settingBtn" destination="1o2-gk-qfv" id="qlY-z1-3Oo"/>
                         <outlet property="viewTimeLabel" destination="lD3-6t-yP5" id="SIA-JW-0kr"/>
                     </connections>
                 </viewController>

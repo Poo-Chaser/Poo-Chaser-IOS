@@ -28,4 +28,8 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = "\(test[indexPath.row])"
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("\(test[indexPath.row])")
+    }
 }

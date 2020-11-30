@@ -47,11 +47,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if DailyTableView != nil {
             DailyTableView.reloadData()
         }
-        
         print("refresh")
     }
+    
     @IBOutlet weak var refreshBtn: UIButton!
     @IBOutlet weak var settingBtn: UIButton!
+    @IBAction func SettingBtn(_ sender: Any) {
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "SettingViewController") as? SettingViewController else {
+            fatalError("Error Setting Button")
+        }
+        
+        self.present(vc, animated: true, completion: nil)
+    }
+    
     
     @IBOutlet weak var viewTimeLabel: UILabel!
     
