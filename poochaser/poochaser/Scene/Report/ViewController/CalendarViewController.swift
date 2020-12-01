@@ -106,6 +106,11 @@ class CalendarViewController: ViewController, FSCalendarDelegate, FSCalendarData
         print("Function Call")
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        DayTableView.allowsSelection = false
+        
+    }
 }
 
 
